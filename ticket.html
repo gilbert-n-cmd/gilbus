@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bus Ticket | BusGo</title>
+
+<link rel="stylesheet" href="css/ticket.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+<div class="ticket-container">
+
+
+<div class="ticket-header">
+
+<i class="fa-solid fa-bus"></i>
+
+<h1>
+BusGo
+</h1>
+
+<p>
+Online Bus Booking Ticket
+</p>
+
+</div>
+
+
+
+
+
+<div class="ticket-body">
+
+
+<h2>
+Travel Ticket
+</h2>
+
+
+
+<div class="ticket-info">
+
+
+<p>
+Passenger Name:
+
+<strong id="name"></strong>
+
+</p>
+
+
+<p>
+Phone:
+
+<strong id="phone"></strong>
+
+</p>
+
+
+<p>
+Route:
+
+<strong id="route"></strong>
+
+</p>
+
+
+<p>
+Bus Company:
+
+<strong id="bus"></strong>
+
+</p>
+
+
+<p>
+Seat Number:
+
+<strong id="seat"></strong>
+
+</p>
+
+
+<p>
+Amount Paid:
+
+<strong id="amount"></strong> UGX
+
+</p>
+
+
+<p>
+Payment Status:
+
+<span class="paid">
+
+Paid
+
+</span>
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div id="qrcode"></div>
+
+
+
+<p class="note">
+
+Present this ticket when boarding the bus.
+
+</p>
+
+
+
+<button onclick="window.print()">
+
+<i class="fa fa-print"></i>
+
+Print Ticket
+
+</button>
+
+
+
+<a href="dashboard.html">
+
+Back Dashboard
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+<script src="js/ticket.js"></script>
+
+
+</body>
+
+</html>

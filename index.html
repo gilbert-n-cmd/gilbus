@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusGo | Bus Booking</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+    
+    <!-- MOBILE MENU BUTTON -->
+
+<div class="mobile-menu">
+
+    <button class="menu-btn">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+</div>
+
+<div class="logo">
+<i class="fa-solid fa-bus"></i>
+BusGo
+</div>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="buses.html">Buses</a>
+<a href="booking.html">My Bookings</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+
+<div class="auth-buttons">
+
+<a href="login.html" class="login">
+Login
+</a>
+
+<a href="register.html" class="signup">
+Register
+</a>
+
+</div>
+
+
+</header>
+
+
+<!-- BACK TO TOP BUTTON -->
+
+<button id="topBtn" title="Back to Top">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<h1>
+Book Your Bus Ticket Easily
+</h1>
+
+
+<p>
+Travel anywhere comfortably with trusted bus operators.
+Search routes, select seats and book online.
+</p>
+
+
+
+<form class="search-box">
+
+
+<div>
+<label>From</label>
+
+<input 
+type="text"
+placeholder="Departure city">
+</div>
+
+
+
+<div>
+<label>To</label>
+
+<input 
+type="text"
+placeholder="Destination">
+</div>
+
+
+
+
+<div>
+
+<label>Date</label>
+
+<input type="date">
+
+</div>
+
+
+
+
+<div>
+
+<label>Passengers</label>
+
+<select>
+
+<option>1 Passenger</option>
+
+<option>2 Passengers</option>
+
+<option>3 Passengers</option>
+
+<option>4 Passengers</option>
+
+</select>
+
+</div>
+
+
+
+
+<button>
+
+<i class="fa fa-search"></i>
+Search Bus
+
+</button>
+
+
+
+</form>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- POPULAR ROUTES -->
+
+<section class="routes">
+
+
+<h2>
+Popular Routes
+</h2>
+
+
+<div class="route-container">
+
+
+
+<div class="route-card">
+
+<i class="fa-solid fa-route"></i>
+
+<h3>
+Arua - Kampala
+</h3>
+
+<p>
+From 50,000 UGX
+</p>
+
+</div>
+
+
+
+<div class="route-card">
+
+<i class="fa-solid fa-route"></i>
+
+<h3>
+Kampala - Gulu
+</h3>
+
+<p>
+From 30,000 UGX
+</p>
+
+</div>
+
+
+
+<div class="route-card">
+
+<i class="fa-solid fa-route"></i>
+
+<h3>
+Arua - Mbarara
+</h3>
+
+<p>
+From 60,000 UGX
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- FEATURES -->
+
+
+<section class="features">
+
+
+<h2>
+Why Choose Us?
+</h2>
+
+
+
+<div class="feature-container">
+
+
+<div class="feature">
+
+<i class="fa-solid fa-ticket"></i>
+
+<h3>
+Easy Booking
+</h3>
+
+<p>
+Book your ticket anytime from your phone.
+</p>
+
+</div>
+
+
+
+
+<div class="feature">
+
+<i class="fa-solid fa-chair"></i>
+
+<h3>
+Seat Selection
+</h3>
+
+<p>
+Choose your preferred seat before payment.
+</p>
+
+</div>
+
+
+
+
+<div class="feature">
+
+<i class="fa-solid fa-shield"></i>
+
+<h3>
+Secure Payment
+</h3>
+
+<p>
+Safe and reliable payment system.
+</p>
+
+</div>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Secure Booking</h3>
+
+<p>Safe online reservations with secure payment methods.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>Always On Time</h3>
+
+<p>Reliable schedules with timely departures.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-chair"></i>
+
+<h3>Choose Your Seat</h3>
+
+<p>Select your preferred seat before payment.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+<h3>Affordable Prices</h3>
+
+<p>Competitive fares with regular discounts.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-headset"></i>
+
+<h3>24/7 Support</h3>
+
+<p>Customer support whenever you need help.</p>
+
+</div>
+
+<div class="why-card">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>Nationwide Routes</h3>
+
+<p>Travel comfortably across Uganda.</p>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     STATISTICS
+========================= -->
+
+<section class="stats">
+
+<h2>BusGo in Numbers</h2>
+
+<p>
+Trusted by thousands of passengers across Uganda.
+</p>
+
+<div class="stats-container">
+
+<div class="stat-box">
+
+<i class="fa-solid fa-bus"></i>
+
+<h3 class="counter" data-target="25">0</h3>
+
+<span>Bus Companies</span>
+
+</div>
+
+
+<div class="stat-box">
+
+<i class="fa-solid fa-route"></i>
+
+<h3 class="counter" data-target="180">0</h3>
+
+<span>Routes</span>
+
+</div>
+
+
+<div class="stat-box">
+
+<i class="fa-solid fa-ticket"></i>
+
+<h3 class="counter" data-target="12500">0</h3>
+
+<span>Tickets Booked</span>
+
+</div>
+
+
+<div class="stat-box">
+
+<i class="fa-solid fa-users"></i>
+
+<h3 class="counter" data-target="50000">0</h3>
+
+<span>Happy Customers</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================================
+     FEATURED BUS OPERATORS
+=========================================== -->
+
+<section class="operators">
+
+    <div class="section-title">
+        <h2>Featured Bus Operators</h2>
+        <p>Travel with Uganda's trusted transport companies.</p>
+    </div>
+
+    <div class="operator-grid">
+
+        <div class="operator-card">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600" alt="Bus">
+            <div class="operator-content">
+                <h3>Link Bus Services</h3>
+                <p><i class="fa-solid fa-star"></i> 4.9 (2,340 Reviews)</p>
+                <p>Luxury Coaches • Free WiFi • USB Charging</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+
+        <div class="operator-card">
+            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600" alt="Bus">
+            <div class="operator-content">
+                <h3>Gaagaa Coaches</h3>
+                <p><i class="fa-solid fa-star"></i> 4.8 (1,950 Reviews)</p>
+                <p>VIP Coaches • Air Conditioning • Reclining Seats</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+
+        <div class="operator-card">
+            <img src="https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?w=600" alt="Bus">
+            <div class="operator-content">
+                <h3>Kalita Bus</h3>
+                <p><i class="fa-solid fa-star"></i> 4.7 (1,420 Reviews)</p>
+                <p>Daily Departures • Comfortable Seats</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     OUR SERVICES
+=========================================== -->
+
+<section class="services">
+
+<div class="section-title">
+
+<h2>Our Services</h2>
+
+<p>Everything you need for a smooth journey.</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<i class="fa-solid fa-bus"></i>
+
+<h3>Bus Booking</h3>
+
+<p>Book tickets online within minutes.</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<h3>Parcel Delivery</h3>
+
+<p>Fast and secure parcel transportation.</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-building"></i>
+
+<h3>Corporate Travel</h3>
+
+<p>Business travel solutions for organizations.</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3>Group Booking</h3>
+
+<p>Special offers for schools and groups.</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-car"></i>
+
+<h3>Airport Transfers</h3>
+
+<p>Comfortable airport pickup and drop-off.</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-map-location-dot"></i>
+
+<h3>Tour Packages</h3>
+
+<p>Explore Uganda with guided travel packages.</p>
+
+</div>
+
+</div>
+
+</section>
+  
+  
+  <!-- ==========================================
+     FEATURED DESTINATIONS
+========================================== -->
+
+<section class="destinations">
+
+    <div class="section-title">
+        <h2>Explore Popular Destinations</h2>
+        <p>Travel to Uganda's most visited cities with comfort.</p>
+    </div>
+
+    <div class="destination-cards">
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?w=700" alt="Kampala">
+            <div class="destination-info">
+                <h3>Kampala</h3>
+                <p>Starting From</p>
+                <h4>UGX 30,000</h4>
+                <button>Explore</button>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1?w=700" alt="Gulu">
+            <div class="destination-info">
+                <h3>Gulu</h3>
+                <p>Starting From</p>
+                <h4>UGX 45,000</h4>
+                <button>Explore</button>
+            </div>
+        </div>
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=700" alt="Mbarara">
+            <div class="destination-info">
+                <h3>Mbarara</h3>
+                <p>Starting From</p>
+                <h4>UGX 40,000</h4>
+                <button>Explore</button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     SPECIAL PROMOTIONS
+========================================== -->
+
+<section class="promotions">
+
+<div class="section-title">
+
+<h2>Special Promotions</h2>
+
+<p>Save more on your next journey.</p>
+
+</div>
+
+<div class="promo-grid">
+
+<div class="promo-card">
+
+<i class="fa-solid fa-tags"></i>
+
+<h3>Student Discount</h3>
+
+<p>Students enjoy up to 15% off selected routes.</p>
+
+<button>Claim Offer</button>
+
+</div>
+
+<div class="promo-card">
+
+<i class="fa-solid fa-gift"></i>
+
+<h3>Family Package</h3>
+
+<p>Book 4 or more seats and receive a discount.</p>
+
+<button>Book Now</button>
+
+</div>
+
+<div class="promo-card">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<h3>Weekend Special</h3>
+
+<p>Travel every weekend and save more.</p>
+
+<button>View Routes</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ==========================================
+     TRAVEL TIPS
+========================================== -->
+
+<section class="tips">
+
+<div class="section-title">
+
+<h2>Travel Tips</h2>
+
+<p>Make your journey comfortable and stress-free.</p>
+
+</div>
+
+<div class="tips-grid">
+
+<div class="tip-card">
+
+<i class="fa-solid fa-clock"></i>
+
+<h3>Arrive Early</h3>
+
+<p>Reach the terminal at least 30 minutes before departure.</p>
+
+</div>
+
+<div class="tip-card">
+
+<i class="fa-solid fa-id-card"></i>
+
+<h3>Carry Identification</h3>
+
+<p>Always travel with a valid national ID or passport.</p>
+
+</div>
+
+<div class="tip-card">
+
+<i class="fa-solid fa-suitcase"></i>
+
+<h3>Label Your Luggage</h3>
+
+<p>Clearly label all your luggage before boarding.</p>
+
+</div>
+
+<div class="tip-card">
+
+<i class="fa-solid fa-mobile-screen-button"></i>
+
+<h3>Keep Your Ticket</h3>
+
+<p>Save your e-ticket on your phone before travelling.</p>
+
+</div>
+
+</div>
+
+</section>
+
+  <!-- ==========================================
+     FREQUENTLY ASKED QUESTIONS
+========================================== -->
+
+<section class="faq">
+
+<div class="section-title">
+
+<h2>
+Frequently Asked Questions
+</h2>
+
+<p>
+Find answers to common questions about BusGo booking.
+</p>
+
+</div>
+
+
+
+<div class="faq-container">
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+How do I book a bus ticket?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+Search your route, select your preferred bus, choose a seat,
+enter passenger details, make payment, and receive your ticket.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Can I select my seat before booking?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+Yes. BusGo allows you to view available seats and select your
+preferred seat before completing payment.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+What payment methods are supported?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+You can pay using Mobile Money, bank cards, and other available
+online payment options.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Can I cancel my booking?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+Yes. Bookings can be cancelled according to the company's
+cancellation policy.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+How do I receive my ticket?
+
+<span>+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+<p>
+After successful payment, your digital ticket will be available
+for download and can also be sent to your email.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+  
+  
+  <!-- ==========================================
+     CUSTOMER TESTIMONIAL SLIDER
+========================================== -->
+
+<section class="testimonials">
+
+
+<div class="section-title">
+
+<h2>
+What Our Customers Say
+</h2>
+
+<p>
+Thousands of travelers trust BusGo every day.
+</p>
+
+</div>
+
+
+
+
+<div class="testimonial-slider">
+
+
+<div class="testimonial-track">
+
+
+
+<div class="testimonial-card">
+
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg" 
+alt="Customer">
+
+
+<h3>
+Gilbert Atuma
+</h3>
+
+
+<div class="stars">
+
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+
+
+<p>
+"Booking my ticket from Arua to Kampala was very easy.
+The seat selection and digital ticket system are excellent."
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="testimonial-card">
+
+
+<img src="https://randomuser.me/api/portraits/women/44.jpg" 
+alt="Customer">
+
+
+<h3>
+Sarah Namukasa
+</h3>
+
+
+<div class="stars">
+
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+
+
+<p>
+"Comfortable buses, reliable schedules and very fast booking.
+I recommend BusGo to everyone."
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="testimonial-card">
+
+
+<img src="https://randomuser.me/api/portraits/men/75.jpg" 
+alt="Customer">
+
+
+<h3>
+John Okello
+</h3>
+
+
+<div class="stars">
+
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+<i class="fa-regular fa-star"></i>
+
+</div>
+
+
+<p>
+"The online payment process was simple and I received my
+ticket instantly."
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="slider-buttons">
+
+<button id="prevReview">
+<i class="fa-solid fa-arrow-left"></i>
+</button>
+
+
+<button id="nextReview">
+<i class="fa-solid fa-arrow-right"></i>
+</button>
+
+
+</div>
+
+
+</section>
+  <!-- ==========================================
+     LATEST NEWS & UPDATES
+========================================== -->
+
+<section class="news">
+
+
+<div class="section-title">
+
+<h2>
+Latest News & Updates
+</h2>
+
+<p>
+Stay updated with BusGo travel information.
+</p>
+
+</div>
+
+
+
+
+<div class="news-grid">
+
+
+
+<div class="news-card">
+
+
+<img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=700"
+alt="New Route">
+
+
+<div class="news-content">
+
+
+<span>
+New Route
+</span>
+
+
+<h3>
+Arua - Kampala Express Service
+</h3>
+
+
+<p>
+We have introduced more daily trips between Arua and Kampala
+for faster and comfortable travel.
+</p>
+
+
+<a href="#">
+Read More
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="news-card">
+
+
+<img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=700"
+alt="Luxury Bus">
+
+
+<div class="news-content">
+
+
+<span>
+Announcement
+</span>
+
+
+<h3>
+New Luxury Buses Added
+</h3>
+
+
+<p>
+Enjoy improved comfort with modern buses featuring WiFi,
+charging ports and comfortable seats.
+</p>
+
+
+<a href="#">
+Read More
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="news-card">
+
+
+<img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=700"
+alt="Travel">
+
+
+<div class="news-content">
+
+
+<span>
+Travel Tips
+</span>
+
+
+<h3>
+Holiday Travel Schedule
+</h3>
+
+
+<p>
+Check our holiday schedules and plan your journey early
+to avoid last-minute delays.
+</p>
+
+
+<a href="#">
+Read More
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+  
+  <!-- ==========================================
+     GALLERY SECTION
+========================================== -->
+
+<section class="gallery">
+
+
+<div class="section-title">
+
+<h2>
+Travel Gallery
+</h2>
+
+<p>
+Explore our buses, terminals and travel experiences.
+</p>
+
+</div>
+
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+
+<img src="https://images.unsplash.com/photo-1570125909517-53cb21c89ff2?w=700"
+alt="Bus">
+
+</div>
+
+
+
+<div class="gallery-item">
+
+<img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=700"
+alt="Luxury Bus">
+
+</div>
+
+
+
+<div class="gallery-item">
+
+<img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=700"
+alt="Coach">
+
+</div>
+
+
+
+<div class="gallery-item">
+
+<img src="https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?w=700"
+alt="Travel">
+
+</div>
+
+
+
+<div class="gallery-item">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=700"
+alt="Road Trip">
+
+</div>
+
+
+
+<div class="gallery-item">
+
+<img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=700"
+alt="Destination">
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ==========================================
+     MOBILE APP SECTION
+========================================== -->
+
+
+<section class="mobile-app">
+
+
+<div class="app-content">
+
+
+<h2>
+Travel With BusGo Mobile App
+</h2>
+
+
+<p>
+Book tickets faster, manage your trips and receive notifications
+directly from your phone.
+</p>
+
+
+
+<div class="app-buttons">
+
+
+<a href="#">
+<i class="fa-brands fa-google-play"></i>
+Google Play
+</a>
+
+
+
+<a href="#">
+<i class="fa-brands fa-apple"></i>
+App Store
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="phone-image">
+
+<img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500"
+alt="Mobile App">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ==========================================
+     PARTNERS SECTION
+========================================== -->
+
+
+<section class="partners">
+
+
+<div class="section-title">
+
+<h2>
+Our Partners
+</h2>
+
+<p>
+Working together to provide better travel experiences.
+</p>
+
+</div>
+
+
+
+<div class="partner-grid">
+
+
+<div>
+
+<i class="fa-solid fa-money-bill-transfer"></i>
+
+<h3>
+Mobile Money
+</h3>
+
+</div>
+
+
+
+
+<div>
+
+<i class="fa-brands fa-cc-visa"></i>
+
+<h3>
+Visa Payment
+</h3>
+
+</div>
+
+
+
+
+<div>
+
+<i class="fa-brands fa-cc-mastercard"></i>
+
+<h3>
+Mastercard
+</h3>
+
+</div>
+
+
+
+
+<div>
+
+<i class="fa-solid fa-building"></i>
+
+<h3>
+Bus Operators
+</h3>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ==========================================
+     FINAL CALL TO ACTION
+========================================== -->
+
+
+<section class="cta">
+
+
+<h2>
+Ready For Your Next Journey?
+</h2>
+
+
+<p>
+Book your bus ticket today and enjoy safe, comfortable
+and affordable travel.
+</p>
+
+
+
+<div>
+
+<a href="buses.html">
+View Buses
+</a>
+
+
+<a href="booking.html">
+Book Now
+</a>
+
+</div>
+
+
+
+</section>
+<!-- FOOTER -->
+
+
+<footer>
+
+
+<div>
+
+<h3>
+BusGo
+</h3>
+
+<p>
+Your trusted online bus booking platform.
+</p>
+
+</div>
+
+
+
+<div>
+
+<h4>
+Quick Links
+</h4>
+
+<a href="#">Home</a>
+
+<a href="#">Buses</a>
+
+<a href="#">Contact</a>
+
+</div>
+
+
+
+
+<div>
+
+<h4>
+Contact
+</h4>
+
+<p>
+Phone: +256 700 000000
+</p>
+
+<p>
+Email: info@busgo.com
+</p>
+
+</div>
+
+
+
+</footer>
+
+
+
+<script src="js/app.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Booking | BusGo</title>
+
+<link rel="stylesheet" href="css/booking.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+
+<i class="fa-solid fa-bus"></i>
+
+BusGo
+
+</div>
+
+
+<a href="buses.html" class="back">
+
+<i class="fa fa-arrow-left"></i>
+
+Back to Buses
+
+</a>
+
+
+</header>
+
+
+
+
+
+<!-- BOOKING CONTAINER -->
+
+
+<section class="booking-container">
+
+
+
+<!-- PASSENGER DETAILS -->
+
+
+<div class="booking-card">
+
+
+<h2>
+Passenger Details
+</h2>
+
+
+<form id="bookingForm">
+
+
+<div class="input-group">
+
+<label>
+Full Name
+</label>
+
+<input 
+type="text"
+id="name"
+placeholder="Enter full name"
+required>
+
+</div>
+
+
+
+<div class="input-group">
+
+<label>
+Phone Number
+</label>
+
+<input 
+type="tel"
+id="phone"
+placeholder="+256..."
+required>
+
+</div>
+
+
+
+<div class="input-group">
+
+<label>
+Email
+</label>
+
+<input 
+type="email"
+id="email"
+placeholder="Email address"
+required>
+
+</div>
+
+
+</form>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- BUS DETAILS -->
+
+
+<div class="booking-card bus-summary">
+
+
+<h2>
+Trip Details
+</h2>
+
+
+<p>
+<i class="fa fa-bus"></i>
+<strong> Link Bus</strong>
+</p>
+
+
+<p>
+<i class="fa fa-route"></i>
+
+Arua → Kampala
+
+</p>
+
+
+<p>
+<i class="fa fa-clock"></i>
+
+Departure: 7:00 AM
+
+</p>
+
+
+<p>
+Ticket Price:
+
+<strong>
+50,000 UGX
+</strong>
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- SEAT SELECTION -->
+
+
+<div class="booking-card">
+
+
+<h2>
+Select Your Seat
+</h2>
+
+
+
+<div class="seat-legend">
+
+
+<span class="available">
+Available
+</span>
+
+
+<span class="selected">
+Selected
+</span>
+
+
+<span class="booked">
+Booked
+</span>
+
+
+</div>
+
+
+
+
+<div class="bus-layout">
+
+
+<div class="driver">
+
+<i class="fa fa-steering-wheel"></i>
+
+Driver
+
+</div>
+
+
+
+<div class="seats">
+
+
+
+<!-- ROW 1 -->
+
+<button class="seat">
+A1
+</button>
+
+<button class="seat">
+A2
+</button>
+
+<span></span>
+
+<button class="seat booked">
+A3
+</button>
+
+<button class="seat">
+A4
+</button>
+
+
+
+
+<!-- ROW 2 -->
+
+
+<button class="seat">
+B1
+</button>
+
+<button class="seat">
+B2
+</button>
+
+<span></span>
+
+<button class="seat">
+B3
+</button>
+
+<button class="seat">
+B4
+</button>
+
+
+
+
+<!-- ROW 3 -->
+
+
+<button class="seat">
+C1
+</button>
+
+<button class="seat booked">
+C2
+</button>
+
+<span></span>
+
+<button class="seat">
+C3
+</button>
+
+<button class="seat">
+C4
+</button>
+
+
+
+
+<!-- ROW 4 -->
+
+
+<button class="seat">
+D1
+</button>
+
+<button class="seat">
+D2
+</button>
+
+<span></span>
+
+<button class="seat">
+D3
+</button>
+
+<button class="seat">
+D4
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- PAYMENT SUMMARY -->
+
+
+<div class="booking-card payment-summary">
+
+
+<h2>
+Booking Summary
+</h2>
+
+
+<p>
+Selected Seat:
+
+<span id="selectedSeat">
+None
+</span>
+
+</p>
+
+
+
+<p>
+
+Total Amount:
+
+<strong>
+
+<span id="totalPrice">
+0
+
+</span>
+
+UGX
+
+</strong>
+
+</p>
+
+
+
+<button id="paymentBtn">
+
+Continue To Payment
+
+<i class="fa fa-arrow-right"></i>
+
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<script src="js/booking.js"></script>
+
+
+</body>
+
+</html>

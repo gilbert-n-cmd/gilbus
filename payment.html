@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payment | BusGo</title>
+
+<link rel="stylesheet" href="css/payment.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+
+<i class="fa-solid fa-bus"></i>
+
+BusGo
+
+</div>
+
+
+<a href="booking.html">
+
+<i class="fa fa-arrow-left"></i>
+
+Back
+
+</a>
+
+
+</header>
+
+
+
+
+
+<section class="payment-container">
+
+
+
+<!-- BOOKING SUMMARY -->
+
+
+<div class="payment-card">
+
+
+<h2>
+Booking Summary
+</h2>
+
+
+
+<div class="summary">
+
+<p>
+Passenger:
+<strong id="passengerName"></strong>
+</p>
+
+
+<p>
+Route:
+<strong id="route"></strong>
+</p>
+
+
+<p>
+Bus:
+<strong id="bus"></strong>
+</p>
+
+
+<p>
+Seat:
+<strong id="seat"></strong>
+</p>
+
+
+<p>
+Amount:
+<strong id="amount"></strong> UGX
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- PAYMENT METHOD -->
+
+
+<div class="payment-card">
+
+
+<h2>
+Choose Payment Method
+</h2>
+
+
+
+<div class="methods">
+
+
+
+<label class="method">
+
+<input 
+type="radio"
+name="payment"
+value="Mobile Money"
+checked>
+
+<i class="fa-solid fa-mobile-screen"></i>
+
+MTN / Airtel Mobile Money
+
+</label>
+
+
+
+
+
+<label class="method">
+
+
+<input 
+type="radio"
+name="payment"
+value="Card">
+
+
+<i class="fa-solid fa-credit-card"></i>
+
+Debit / Credit Card
+
+
+</label>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+Phone Number
+</label>
+
+
+<input 
+type="tel"
+id="paymentPhone"
+placeholder="+256700000000">
+
+
+</div>
+
+
+
+
+<button id="payBtn">
+
+
+<i class="fa fa-lock"></i>
+
+Confirm Payment
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+<script type="module" src="js/payment.js"></script>
+
+
+</body>
+
+</html>
