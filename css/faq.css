@@ -1,0 +1,400 @@
+/* ==========================================
+   BUSGO FAQ PAGE
+========================================== */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+
+body{
+
+    background:#f5f7fb;
+    color:#333;
+
+}
+
+
+
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+
+header{
+
+    background:white;
+
+    padding:18px 7%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:
+    0 4px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#0066ff;
+
+}
+
+
+
+.logo i{
+
+    margin-right:8px;
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-weight:500;
+
+}
+
+
+
+nav a:hover{
+
+    color:#0066ff;
+
+}
+
+
+
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+
+.faq-hero{
+
+
+    background:
+
+    linear-gradient(
+    rgba(0,30,80,.7),
+    rgba(0,30,80,.7)
+    ),
+
+    url("../images/faq.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:90px 7%;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+
+.faq-hero h1{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.faq-hero p{
+
+    font-size:18px;
+
+}
+
+
+
+
+
+/* ==========================================
+   FAQ CONTAINER
+========================================== */
+
+
+.faq-container{
+
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:50px auto;
+
+
+}
+
+
+
+
+
+/* SEARCH */
+
+
+.search-box{
+
+    margin-bottom:30px;
+
+}
+
+
+
+.search-box input{
+
+
+    width:100%;
+
+    padding:15px 20px;
+
+    border:1px solid #ddd;
+
+    border-radius:30px;
+
+    outline:none;
+
+    font-size:16px;
+
+
+}
+
+
+
+.search-box input:focus{
+
+    border-color:#0066ff;
+
+}
+
+
+
+
+
+/* ==========================================
+   FAQ ITEMS
+========================================== */
+
+
+.faq-item{
+
+
+    background:white;
+
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,.08);
+
+
+}
+
+
+
+
+
+.question{
+
+
+    width:100%;
+
+    padding:20px;
+
+    border:none;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#333;
+
+
+}
+
+
+
+.question i{
+
+    color:#0066ff;
+
+}
+
+
+
+
+
+.answer{
+
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:.4s ease;
+
+    background:#f5f7fb;
+
+
+}
+
+
+
+.answer p{
+
+
+    padding:20px;
+
+    line-height:1.6;
+
+    color:#666;
+
+
+}
+
+
+
+
+
+.faq-item.active .answer{
+
+    max-height:200px;
+
+}
+
+
+
+
+
+.faq-item.active .question i{
+
+    transform:rotate(45deg);
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+
+footer{
+
+    background:#111827;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+
+@media(max-width:800px){
+
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+
+
+.faq-hero h1{
+
+    font-size:32px;
+
+}
+
+
+
+}
+

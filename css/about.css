@@ -1,0 +1,513 @@
+/* ==========================================
+   BUSGO ABOUT PAGE
+========================================== */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+
+body{
+
+    background:#f5f7fb;
+    color:#333;
+
+}
+
+
+
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+
+header{
+
+    background:white;
+
+    padding:18px 7%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#0066ff;
+
+}
+
+
+.logo i{
+
+    margin-right:8px;
+
+}
+
+
+
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-weight:500;
+
+}
+
+
+
+nav a:hover{
+
+    color:#0066ff;
+
+}
+
+
+
+
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+
+.about-hero{
+
+
+    background:
+
+    linear-gradient(
+    rgba(0,30,80,.7),
+    rgba(0,30,80,.7)
+    ),
+
+    url("../images/about.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:white;
+
+    text-align:center;
+
+    padding:90px 7%;
+
+
+}
+
+
+
+.about-hero h1{
+
+    font-size:48px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.about-hero p{
+
+    font-size:18px;
+
+}
+
+
+
+
+
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+
+.about-section{
+
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+
+}
+
+
+
+.about-image img{
+
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+
+}
+
+
+
+.about-content h2{
+
+    color:#0066ff;
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.about-content p{
+
+    line-height:1.7;
+
+    margin-bottom:15px;
+
+    color:#666;
+
+}
+
+
+
+
+
+/* ==========================================
+   MISSION
+========================================== */
+
+
+.mission{
+
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+
+}
+
+
+
+.mission div{
+
+
+    background:white;
+
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+
+}
+
+
+
+.mission i{
+
+
+    font-size:45px;
+
+    color:#0066ff;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.mission h2{
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+
+/* ==========================================
+   WHY CHOOSE
+========================================== */
+
+
+.why{
+
+
+    padding:60px 7%;
+
+    text-align:center;
+
+
+}
+
+
+
+.why h2{
+
+    color:#0066ff;
+
+    font-size:35px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+
+
+.why-grid{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+
+}
+
+
+
+.why-grid div{
+
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+
+}
+
+
+
+.why-grid i{
+
+
+    font-size:40px;
+
+    color:#0066ff;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.why-grid h3{
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+
+/* ==========================================
+   STATS
+========================================== */
+
+
+.stats{
+
+
+    background:#0066ff;
+
+    color:white;
+
+    padding:50px 7%;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    text-align:center;
+
+    gap:20px;
+
+
+}
+
+
+
+.stats h2{
+
+
+    font-size:45px;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+
+footer{
+
+
+    background:#111827;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+
+@media(max-width:900px){
+
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+
+
+.about-section{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.mission{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.why-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.stats{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.about-hero h1{
+
+    font-size:35px;
+
+}
+
+
+}
+

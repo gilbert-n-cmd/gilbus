@@ -1,0 +1,552 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+header{
+
+    background:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+}
+
+
+.logo{
+
+    color:#0066ff;
+    font-size:30px;
+    font-weight:700;
+
+}
+
+
+.logo i{
+
+    margin-right:8px;
+
+}
+
+
+.back{
+
+    text-decoration:none;
+    color:#0066ff;
+    font-weight:600;
+
+}
+
+
+
+
+/* ==========================================
+   BOOKING LAYOUT
+========================================== */
+
+
+.booking-container{
+
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:25px;
+
+}
+
+
+
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+
+.booking-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+.booking-card h2{
+
+    color:#0066ff;
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+
+.input-group{
+
+    margin-bottom:20px;
+
+}
+
+
+.input-group label{
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    display:block;
+
+}
+
+
+.input-group input{
+
+    width:100%;
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+
+.input-group input:focus{
+
+    border-color:#0066ff;
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   TRIP DETAILS
+========================================== */
+
+
+.bus-summary{
+
+    background:
+    linear-gradient(135deg,#0066ff,#00b4d8);
+
+    color:white;
+
+}
+
+
+.bus-summary h2{
+
+    color:white;
+
+}
+
+
+.bus-summary p{
+
+    margin:15px 0;
+
+    font-size:16px;
+
+}
+
+
+.bus-summary i{
+
+    margin-right:10px;
+
+}
+
+
+
+
+
+
+/* ==========================================
+   SEAT SECTION
+========================================== */
+
+
+.seat-legend{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+
+.seat-legend span{
+
+    padding:8px 15px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+}
+
+
+.available{
+
+    background:#e8e8e8;
+
+}
+
+
+.selected{
+
+    background:#0066ff;
+
+    color:white;
+
+}
+
+
+.booked{
+
+    background:#555;
+
+    color:white;
+
+}
+
+
+
+
+
+/* BUS DESIGN */
+
+
+.bus-layout{
+
+    background:#eef3ff;
+
+    padding:30px;
+
+    border-radius:25px;
+
+}
+
+
+
+.driver{
+
+    background:#111;
+
+    color:white;
+
+    padding:12px;
+
+    width:130px;
+
+    text-align:center;
+
+    border-radius:10px;
+
+    margin-left:auto;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+.seats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,65px)
+    35px
+    repeat(2,65px);
+
+    gap:15px;
+
+    justify-content:center;
+
+}
+
+
+
+
+.seat{
+
+    height:60px;
+
+    width:65px;
+
+    border:none;
+
+    background:white;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:
+    0 5px 10px rgba(0,0,0,.1);
+
+}
+
+
+
+.seat:hover{
+
+    background:#0066ff;
+
+    color:white;
+
+    transform:scale(1.05);
+
+}
+
+
+
+.seat.selected{
+
+    background:#0066ff;
+
+    color:white;
+
+}
+
+
+
+.seat.booked{
+
+    background:#777;
+
+    color:white;
+
+    cursor:not-allowed;
+
+}
+
+
+
+
+
+
+
+/* ==========================================
+   PAYMENT SUMMARY
+========================================== */
+
+
+.payment-summary{
+
+    grid-column:span 2;
+
+    text-align:center;
+
+}
+
+
+.payment-summary p{
+
+    font-size:18px;
+
+    margin:15px;
+
+}
+
+
+#selectedSeat{
+
+    color:#0066ff;
+
+    font-weight:bold;
+
+}
+
+
+#totalPrice{
+
+    color:#0066ff;
+
+    font-size:25px;
+
+}
+
+
+
+
+
+#paymentBtn{
+
+    margin-top:20px;
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#0066ff;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+#paymentBtn:hover{
+
+    background:#004bcc;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+
+
+/* ==========================================
+   MOBILE DESIGN
+========================================== */
+
+
+@media(max-width:900px){
+
+
+.booking-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.payment-summary{
+
+    grid-column:auto;
+
+}
+
+
+
+.seats{
+
+    grid-template-columns:
+    repeat(2,50px)
+    20px
+    repeat(2,50px);
+
+    gap:10px;
+
+}
+
+
+
+.seat{
+
+    width:50px;
+
+    height:50px;
+
+}
+
+
+
+header{
+
+    padding:15px 20px;
+
+}
+
+
+.logo{
+
+    font-size:23px;
+
+}
+
+
+}
+
+
+
+@media(max-width:450px){
+
+
+.booking-card{
+
+    padding:20px;
+
+}
+
+
+.seats{
+
+    transform:scale(.9);
+
+}
+
+
+
+}

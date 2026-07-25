@@ -1,0 +1,479 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+
+    background:#f5f7fb;
+    color:#333;
+
+}
+
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+
+header{
+
+    background:white;
+
+    padding:18px 7%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#0066ff;
+
+}
+
+
+
+.logo i{
+
+    margin-right:8px;
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-weight:500;
+
+}
+
+
+
+nav a:hover{
+
+    color:#0066ff;
+
+}
+
+
+
+
+
+/* ==========================================
+   SEARCH BANNER
+========================================== */
+
+
+.search-banner{
+
+    background:
+
+    linear-gradient(
+    rgba(0,50,120,.75),
+    rgba(0,50,120,.75)
+    ),
+
+    url("../images/bus.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:70px 7%;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.search-banner h1{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.search-banner p{
+
+    font-size:18px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+/* ==========================================
+   SEARCH FORM
+========================================== */
+
+
+.bus-search{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+
+
+.bus-search input{
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    outline:none;
+
+}
+
+
+
+.bus-search button{
+
+    background:#0066ff;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+
+.bus-search button:hover{
+
+    background:#004bcc;
+
+}
+
+
+
+
+
+/* ==========================================
+   BUS SECTION
+========================================== */
+
+
+.bus-section{
+
+    padding:60px 7%;
+
+}
+
+
+
+.bus-section h2{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    font-size:32px;
+
+}
+
+
+
+
+
+/* ==========================================
+   BUS CARDS
+========================================== */
+
+
+.bus-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+
+
+
+.bus-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    display:grid;
+
+    grid-template-columns:100px 1fr 180px;
+
+    align-items:center;
+
+    gap:25px;
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+
+.bus-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+/* BUS ICON */
+
+
+.bus-logo{
+
+    width:80px;
+
+    height:80px;
+
+    background:#0066ff;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:35px;
+
+}
+
+
+
+
+
+/* INFO */
+
+
+.bus-info h3{
+
+    font-size:22px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.bus-info p{
+
+    margin:8px 0;
+
+    color:#666;
+
+}
+
+
+
+.bus-info i{
+
+    color:#0066ff;
+
+    margin-right:8px;
+
+}
+
+
+
+
+
+/* PRICE */
+
+
+.price{
+
+    text-align:center;
+
+}
+
+
+
+.price h3{
+
+    color:#0066ff;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.price a{
+
+    text-decoration:none;
+
+    background:#0066ff;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:25px;
+
+    display:inline-block;
+
+}
+
+
+
+.price a:hover{
+
+    background:#004bcc;
+
+}
+
+
+
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+
+@media(max-width:900px){
+
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+nav{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+
+
+.bus-search{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.bus-card{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+
+
+.bus-logo{
+
+    margin:auto;
+
+}
+
+
+
+.price{
+
+    margin-top:15px;
+
+}
+
+
+
+.search-banner h1{
+
+    font-size:32px;
+
+}
+
+
+}
+

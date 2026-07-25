@@ -1,0 +1,446 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+
+}
+
+
+body{
+
+background:#f5f7fb;
+color:#333;
+
+}
+
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+
+header{
+
+background:white;
+
+padding:20px 7%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+
+}
+
+
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#0066ff;
+
+}
+
+
+
+.logo i{
+
+margin-right:8px;
+
+}
+
+
+
+.user-menu{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+
+
+#userName{
+
+font-weight:600;
+
+}
+
+
+
+#logoutBtn{
+
+background:#0066ff;
+
+color:white;
+
+border:none;
+
+padding:10px 20px;
+
+border-radius:25px;
+
+cursor:pointer;
+
+}
+
+
+
+#logoutBtn:hover{
+
+background:#004bcc;
+
+}
+
+
+
+
+
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+
+.dashboard{
+
+padding:50px 7%;
+
+}
+
+
+
+
+/* ==========================================
+   WELCOME CARD
+========================================== */
+
+
+.welcome-card{
+
+background:
+linear-gradient(
+135deg,
+#0066ff,
+#00b4d8
+);
+
+color:white;
+
+padding:45px;
+
+border-radius:20px;
+
+margin-bottom:40px;
+
+}
+
+
+
+.welcome-card h1{
+
+font-size:35px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.welcome-card p{
+
+font-size:18px;
+
+margin-bottom:25px;
+
+}
+
+
+
+.welcome-card a{
+
+display:inline-block;
+
+background:white;
+
+color:#0066ff;
+
+padding:12px 25px;
+
+border-radius:30px;
+
+text-decoration:none;
+
+font-weight:600;
+
+}
+
+
+
+
+
+/* ==========================================
+   DASHBOARD CARDS
+========================================== */
+
+
+.dashboard-cards{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+.card i{
+
+font-size:40px;
+
+color:#0066ff;
+
+margin-bottom:20px;
+
+}
+
+
+
+.card h3{
+
+margin-bottom:12px;
+
+}
+
+
+
+.card p{
+
+color:#666;
+
+line-height:1.6;
+
+margin-bottom:20px;
+
+}
+
+
+
+.card a{
+
+text-decoration:none;
+
+color:#0066ff;
+
+font-weight:600;
+
+}
+
+
+
+
+
+/* ==========================================
+   QUICK BOOKING
+========================================== */
+
+
+.quick-booking{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+margin-top:40px;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+.quick-booking h2{
+
+margin-bottom:25px;
+
+}
+
+
+
+.quick-booking form{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+
+
+.quick-booking label{
+
+display:block;
+
+font-weight:600;
+
+margin-bottom:8px;
+
+}
+
+
+
+.quick-booking input{
+
+width:100%;
+
+padding:13px;
+
+border:1px solid #ddd;
+
+border-radius:8px;
+
+}
+
+
+
+.quick-booking button{
+
+background:#0066ff;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+
+
+.quick-booking button:hover{
+
+background:#004bcc;
+
+}
+
+
+
+
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+
+@media(max-width:900px){
+
+
+header{
+
+padding:15px 20px;
+
+}
+
+
+
+.logo{
+
+font-size:22px;
+
+}
+
+
+
+.user-menu{
+
+gap:10px;
+
+}
+
+
+
+#userName{
+
+display:none;
+
+}
+
+
+
+.dashboard-cards{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.quick-booking form{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.welcome-card h1{
+
+font-size:28px;
+
+}
+
+
+
+}
+
