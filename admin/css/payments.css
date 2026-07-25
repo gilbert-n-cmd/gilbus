@@ -52,8 +52,8 @@ ul{
     background:#0d47a1;
     color:white;
     position:fixed;
-    top:0;
     left:0;
+    top:0;
     padding:20px;
     display:flex;
     flex-direction:column;
@@ -63,14 +63,16 @@ ul{
 
 
 
+
 .sidebar-header{
 
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
     margin-bottom:30px;
 
 }
+
 
 
 
@@ -100,6 +102,7 @@ ul{
 
 
 
+
 #closeMenu{
 
     display:none;
@@ -114,11 +117,14 @@ ul{
 
 
 
+
+
 .sidebar ul{
 
     flex:1;
 
 }
+
 
 
 
@@ -130,17 +136,19 @@ ul{
 
 
 
+
 .sidebar li a{
 
     display:flex;
     align-items:center;
     gap:15px;
-    padding:13px;
+    padding:13px 15px;
     border-radius:10px;
-    transition:.3s;
     font-size:15px;
+    transition:.3s;
 
 }
+
 
 
 
@@ -151,6 +159,8 @@ ul{
     color:#0d47a1;
 
 }
+
+
 
 
 
@@ -173,11 +183,13 @@ ul{
 
 
 
+
 #logoutBtn:hover{
 
     background:#b52a37;
 
 }
+
 
 
 
@@ -219,6 +231,7 @@ ul{
 
 
 
+
 /* =========================
    TOPBAR
 ========================= */
@@ -232,8 +245,8 @@ ul{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.05);
     margin-bottom:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
 
 }
 
@@ -241,8 +254,8 @@ ul{
 
 .topbar h2{
 
-    color:#1d3557;
     font-size:25px;
+    color:#1d3557;
 
 }
 
@@ -271,6 +284,9 @@ ul{
 
 
 
+
+
+
 /* =========================
    STATISTICS CARDS
 ========================= */
@@ -284,6 +300,7 @@ ul{
     margin-bottom:30px;
 
 }
+
 
 
 
@@ -302,6 +319,7 @@ ul{
 
 
 
+
 .card:hover{
 
     transform:translateY(-5px);
@@ -310,13 +328,15 @@ ul{
 
 
 
+
 .card h3{
 
-    font-size:28px;
+    font-size:25px;
     color:#1d3557;
     margin-bottom:5px;
 
 }
+
 
 
 
@@ -326,6 +346,8 @@ ul{
     font-size:14px;
 
 }
+
+
 
 
 
@@ -347,11 +369,13 @@ ul{
 
 
 
+
 .card-icon.blue{
 
     background:#0066ff;
 
 }
+
 
 
 
@@ -363,11 +387,13 @@ ul{
 
 
 
+
 .card-icon.orange{
 
     background:#ff9800;
 
 }
+
 
 
 
@@ -389,11 +415,13 @@ ul{
     display:flex;
     align-items:center;
     gap:15px;
+    flex-wrap:wrap;
     margin-bottom:25px;
     box-shadow:0 5px 15px rgba(0,0,0,.05);
-    flex-wrap:wrap;
 
 }
+
+
 
 
 
@@ -410,11 +438,15 @@ ul{
 
 
 
+
+
 .toolbar input{
 
     width:320px;
 
 }
+
+
 
 
 
@@ -424,6 +456,7 @@ ul{
     border-color:#0066ff;
 
 }
+
 
 
 
@@ -450,13 +483,17 @@ ul{
 
 
 
+
+
 table{
 
     width:100%;
     border-collapse:collapse;
-    min-width:1100px;
+    min-width:1000px;
 
 }
+
+
 
 
 
@@ -467,6 +504,9 @@ thead{
     background:#f1f5ff;
 
 }
+
+
+
 
 
 
@@ -484,6 +524,8 @@ th{
 
 
 
+
+
 td{
 
     padding:15px;
@@ -495,11 +537,15 @@ td{
 
 
 
+
+
 tbody tr:hover{
 
     background:#f8faff;
 
 }
+
+
 
 
 
@@ -519,14 +565,19 @@ tbody tr:hover{
 
 
 
+
+
 /* =========================
-   STATUS BADGES
+   PAYMENT STATUS BADGES
 ========================= */
 
 
-.status{
 
-    padding:6px 14px;
+
+
+.payment-status{
+
+    padding:7px 15px;
     border-radius:20px;
     font-size:13px;
     font-weight:600;
@@ -538,10 +589,8 @@ tbody tr:hover{
 
 
 
-/* BOOKING STATUS */
 
-
-.status.confirmed{
+.payment-status.paid{
 
     background:#d4edda;
     color:#198754;
@@ -550,7 +599,9 @@ tbody tr:hover{
 
 
 
-.status.pending{
+
+
+.payment-status.pending{
 
     background:#fff3cd;
     color:#997404;
@@ -559,7 +610,10 @@ tbody tr:hover{
 
 
 
-.status.cancelled{
+
+
+
+.payment-status.failed{
 
     background:#f8d7da;
     color:#dc3545;
@@ -572,47 +626,25 @@ tbody tr:hover{
 
 
 
-/* PAYMENT STATUS */
+
+/* =========================
+   PAYMENT METHOD
+========================= */
 
 
-.payment-paid{
 
-    background:#d4edda;
-    color:#198754;
-    padding:6px 14px;
-    border-radius:20px;
+.method{
+
+    padding:6px 12px;
+    border-radius:8px;
+    background:#eef4ff;
+    color:#0066ff;
     font-size:13px;
     font-weight:600;
 
 }
 
 
-
-
-.payment-pending{
-
-    background:#fff3cd;
-    color:#997404;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:600;
-
-}
-
-
-
-
-.payment-failed{
-
-    background:#f8d7da;
-    color:#dc3545;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:600;
-
-}
 
 
 
@@ -625,6 +657,7 @@ tbody tr:hover{
 ========================= */
 
 
+
 .actions{
 
     display:flex;
@@ -635,19 +668,25 @@ tbody tr:hover{
 
 
 
+
+
+
 .actions button{
 
     width:35px;
     height:35px;
     border:none;
     border-radius:8px;
-    color:white;
     cursor:pointer;
+    color:white;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
 }
+
+
+
 
 
 
@@ -659,7 +698,11 @@ tbody tr:hover{
 
 
 
-.confirm-btn{
+
+
+
+
+.paid-btn{
 
     background:#28a745;
 
@@ -667,7 +710,11 @@ tbody tr:hover{
 
 
 
-.cancel-btn{
+
+
+
+
+.failed-btn{
 
     background:#dc3545;
 
@@ -675,9 +722,13 @@ tbody tr:hover{
 
 
 
+
+
+
+
 .actions button:hover{
 
-    opacity:.8;
+    opacity:.85;
 
 }
 
@@ -685,12 +736,15 @@ tbody tr:hover{
 
 
 
+
+
+
 /* =========================
-   BOOKING DETAILS
+   PAYMENT DETAILS
 ========================= */
 
 
-.booking-details{
+.payment-details{
 
     display:grid;
     gap:15px;
@@ -699,7 +753,8 @@ tbody tr:hover{
 
 
 
-.booking-details p{
+
+.payment-details p{
 
     background:#f8f9fa;
     padding:12px;
@@ -709,7 +764,8 @@ tbody tr:hover{
 
 
 
-.booking-details strong{
+
+.payment-details strong{
 
     color:#1d3557;
 
@@ -747,6 +803,7 @@ tbody tr:hover{
 
 
 
+
 .modal-content{
 
     background:white;
@@ -755,11 +812,12 @@ tbody tr:hover{
     border-radius:20px;
     padding:30px;
     box-shadow:0 10px 40px rgba(0,0,0,.25);
-    animation:slideDown .3s ease;
+    animation:popup .3s ease;
     max-height:90vh;
     overflow-y:auto;
 
 }
+
 
 
 
@@ -779,6 +837,7 @@ tbody tr:hover{
 
 
 
+
 /* =========================
    MODAL BUTTONS
 ========================= */
@@ -789,7 +848,6 @@ tbody tr:hover{
     display:flex;
     gap:12px;
     margin-top:25px;
-    flex-wrap:wrap;
 
 }
 
@@ -803,15 +861,16 @@ tbody tr:hover{
     padding:13px;
     border:none;
     border-radius:10px;
+    color:white;
     cursor:pointer;
     font-weight:600;
-    color:white;
 
 }
 
 
 
-#confirmBooking{
+
+#markPaid{
 
     background:#28a745;
 
@@ -819,7 +878,10 @@ tbody tr:hover{
 
 
 
-#cancelBooking{
+
+
+
+#markFailed{
 
     background:#dc3545;
 
@@ -827,11 +889,18 @@ tbody tr:hover{
 
 
 
-#closeBooking{
+
+
+
+#closePayment{
 
     background:#6c757d;
 
 }
+
+
+
+
 
 
 
@@ -854,8 +923,8 @@ tbody tr:hover{
 ========================= */
 
 
-
 @media(max-width:1100px){
+
 
 
 .cards{
@@ -871,6 +940,9 @@ tbody tr:hover{
 
 
 
+
+
+
 @media(max-width:900px){
 
 
@@ -881,6 +953,7 @@ tbody tr:hover{
     transition:.3s;
 
 }
+
 
 
 
@@ -902,12 +975,15 @@ tbody tr:hover{
 
 
 
+
+
 .main{
 
     margin-left:0;
     padding:15px;
 
 }
+
 
 
 
@@ -924,11 +1000,14 @@ tbody tr:hover{
 
 
 
+
+
 .topbar{
 
     padding:18px;
 
 }
+
 
 
 
@@ -1007,6 +1086,7 @@ tbody tr:hover{
 
 
 
+
 .modal-content{
 
     padding:20px;
@@ -1022,7 +1102,6 @@ tbody tr:hover{
     flex-direction:column;
 
 }
-
 
 
 
@@ -1050,13 +1129,13 @@ tbody tr:hover{
 ========================= */
 
 
-@keyframes slideDown{
+@keyframes popup{
 
 
 from{
 
     opacity:0;
-    transform:translateY(-30px);
+    transform:scale(.9);
 
 }
 
@@ -1065,7 +1144,7 @@ from{
 to{
 
     opacity:1;
-    transform:translateY(0);
+    transform:scale(1);
 
 }
 
@@ -1076,30 +1155,14 @@ to{
 
 
 
-
-
-/* LOADING EFFECT */
-
-
-.loading{
-
-    text-align:center;
-    padding:30px;
-    color:#0066ff;
-
-}
-
-
-
-
-/* SMOOTH TRANSITIONS */
 
 
 button,
-select,
 input,
+select,
 .card{
 
     transition:.3s;
 
 }
+

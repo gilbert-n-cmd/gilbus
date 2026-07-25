@@ -1,3 +1,9 @@
+/* ==========================================
+   BUSGO ADMIN - MESSAGES CSS
+   PART 1
+========================================== */
+
+
 /* =========================
    RESET
 ========================= */
@@ -10,6 +16,7 @@
     font-family:'Poppins',sans-serif;
 
 }
+
 
 
 body{
@@ -49,17 +56,19 @@ ul{
 
     width:260px;
     height:100vh;
-    background:#0d47a1;
-    color:white;
     position:fixed;
     top:0;
     left:0;
+    background:#0d47a1;
+    color:white;
     padding:20px;
     display:flex;
     flex-direction:column;
     z-index:1000;
 
 }
+
+
 
 
 
@@ -74,6 +83,8 @@ ul{
 
 
 
+
+
 .logo{
 
     display:flex;
@@ -81,6 +92,8 @@ ul{
     gap:10px;
 
 }
+
+
 
 
 
@@ -92,11 +105,15 @@ ul{
 
 
 
+
+
 .logo h2{
 
     font-size:25px;
 
 }
+
+
 
 
 
@@ -107,9 +124,9 @@ ul{
     border:none;
     color:white;
     font-size:22px;
-    cursor:pointer;
 
 }
+
 
 
 
@@ -122,6 +139,8 @@ ul{
 
 
 
+
+
 .sidebar li{
 
     margin-bottom:8px;
@@ -130,17 +149,20 @@ ul{
 
 
 
+
+
 .sidebar li a{
 
     display:flex;
     align-items:center;
     gap:15px;
-    padding:13px;
+    padding:13px 15px;
     border-radius:10px;
     transition:.3s;
-    font-size:15px;
 
 }
+
+
 
 
 
@@ -151,6 +173,7 @@ ul{
     color:#0d47a1;
 
 }
+
 
 
 
@@ -173,13 +196,6 @@ ul{
 
 
 
-#logoutBtn:hover{
-
-    background:#b52a37;
-
-}
-
-
 
 
 
@@ -187,7 +203,7 @@ ul{
 
 
 /* =========================
-   MAIN CONTENT
+   MAIN
 ========================= */
 
 
@@ -195,9 +211,10 @@ ul{
 
     margin-left:260px;
     padding:25px;
-    min-height:100vh;
 
 }
+
+
 
 
 
@@ -209,9 +226,10 @@ ul{
     border:none;
     padding:10px 15px;
     border-radius:8px;
-    cursor:pointer;
 
 }
+
+
 
 
 
@@ -232,19 +250,22 @@ ul{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.05);
     margin-bottom:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
 
 }
+
+
 
 
 
 .topbar h2{
 
     color:#1d3557;
-    font-size:25px;
 
 }
+
+
 
 
 
@@ -258,10 +279,12 @@ ul{
 
 
 
+
+
 .admin-profile i{
 
-    font-size:35px;
     color:#0d47a1;
+    font-size:35px;
 
 }
 
@@ -271,8 +294,10 @@ ul{
 
 
 
+
+
 /* =========================
-   STATISTICS CARDS
+   MESSAGE CARDS
 ========================= */
 
 
@@ -284,6 +309,8 @@ ul{
     margin-bottom:30px;
 
 }
+
+
 
 
 
@@ -302,6 +329,8 @@ ul{
 
 
 
+
+
 .card:hover{
 
     transform:translateY(-5px);
@@ -310,22 +339,25 @@ ul{
 
 
 
+
+
 .card h3{
 
-    font-size:28px;
+    font-size:26px;
     color:#1d3557;
-    margin-bottom:5px;
 
 }
+
+
 
 
 
 .card p{
 
     color:#777;
-    font-size:14px;
 
 }
+
 
 
 
@@ -337,12 +369,13 @@ ul{
     height:55px;
     border-radius:50%;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     color:white;
     font-size:22px;
 
 }
+
 
 
 
@@ -355,12 +388,6 @@ ul{
 
 
 
-.card-icon.green{
-
-    background:#28a745;
-
-}
-
 
 
 .card-icon.orange{
@@ -371,11 +398,30 @@ ul{
 
 
 
+
+
+.card-icon.green{
+
+    background:#28a745;
+
+}
+
+
+
+
+
 .card-icon.red{
 
     background:#dc3545;
 
 }
+
+/* ==========================================
+   BUSGO ADMIN - MESSAGES CSS
+   PART 2
+========================================== */
+
+
 /* =========================
    TOOLBAR
 ========================= */
@@ -389,11 +435,13 @@ ul{
     display:flex;
     align-items:center;
     gap:15px;
+    flex-wrap:wrap;
     margin-bottom:25px;
     box-shadow:0 5px 15px rgba(0,0,0,.05);
-    flex-wrap:wrap;
 
 }
+
+
 
 
 
@@ -410,11 +458,15 @@ ul{
 
 
 
+
+
 .toolbar input{
 
-    width:320px;
+    width:330px;
 
 }
+
+
 
 
 
@@ -424,6 +476,8 @@ ul{
     border-color:#0066ff;
 
 }
+
+
 
 
 
@@ -450,11 +504,12 @@ ul{
 
 
 
+
 table{
 
     width:100%;
     border-collapse:collapse;
-    min-width:1100px;
+    min-width:1000px;
 
 }
 
@@ -471,12 +526,13 @@ thead{
 
 
 
+
 th{
 
     padding:15px;
     text-align:left;
-    font-size:14px;
     color:#1d3557;
+    font-size:14px;
 
 }
 
@@ -491,6 +547,7 @@ td{
     font-size:14px;
 
 }
+
 
 
 
@@ -519,14 +576,16 @@ tbody tr:hover{
 
 
 
+
+
 /* =========================
-   STATUS BADGES
+   MESSAGE STATUS
 ========================= */
 
 
-.status{
+.status-badge{
 
-    padding:6px 14px;
+    padding:7px 14px;
     border-radius:20px;
     font-size:13px;
     font-weight:600;
@@ -538,30 +597,9 @@ tbody tr:hover{
 
 
 
-/* BOOKING STATUS */
+.status-badge.unread{
 
-
-.status.confirmed{
-
-    background:#d4edda;
-    color:#198754;
-
-}
-
-
-
-.status.pending{
-
-    background:#fff3cd;
-    color:#997404;
-
-}
-
-
-
-.status.cancelled{
-
-    background:#f8d7da;
+    background:#fde2e2;
     color:#dc3545;
 
 }
@@ -570,18 +608,42 @@ tbody tr:hover{
 
 
 
+.status-badge.read{
 
-
-/* PAYMENT STATUS */
-
-
-.payment-paid{
-
-    background:#d4edda;
+    background:#e8f5e9;
     color:#198754;
-    padding:6px 14px;
+
+}
+
+
+
+
+
+.status-badge.replied{
+
+    background:#dbeafe;
+    color:#0066ff;
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   PRIORITY BADGE
+========================= */
+
+
+.priority{
+
+    padding:6px 12px;
     border-radius:20px;
-    font-size:13px;
+    font-size:12px;
     font-weight:600;
 
 }
@@ -589,30 +651,26 @@ tbody tr:hover{
 
 
 
-.payment-pending{
 
-    background:#fff3cd;
-    color:#997404;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:600;
+.priority.normal{
+
+    background:#eee;
+    color:#555;
 
 }
 
 
 
 
-.payment-failed{
+
+.priority.urgent{
 
     background:#f8d7da;
     color:#dc3545;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:600;
 
 }
+
+
 
 
 
@@ -635,19 +693,22 @@ tbody tr:hover{
 
 
 
+
 .actions button{
 
-    width:35px;
-    height:35px;
+    width:36px;
+    height:36px;
     border:none;
     border-radius:8px;
-    color:white;
     cursor:pointer;
+    color:white;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
 }
+
+
 
 
 
@@ -659,7 +720,9 @@ tbody tr:hover{
 
 
 
-.confirm-btn{
+
+
+.reply-btn{
 
     background:#28a745;
 
@@ -667,7 +730,9 @@ tbody tr:hover{
 
 
 
-.cancel-btn{
+
+
+.delete-btn{
 
     background:#dc3545;
 
@@ -675,47 +740,22 @@ tbody tr:hover{
 
 
 
+
+
 .actions button:hover{
 
-    opacity:.8;
+    opacity:.85;
 
 }
 
-
-
+/* ==========================================
+   BUSGO ADMIN - MESSAGES CSS
+   PART 3
+========================================== */
 
 
 /* =========================
-   BOOKING DETAILS
-========================= */
-
-
-.booking-details{
-
-    display:grid;
-    gap:15px;
-
-}
-
-
-
-.booking-details p{
-
-    background:#f8f9fa;
-    padding:12px;
-    border-radius:10px;
-
-}
-
-
-
-.booking-details strong{
-
-    color:#1d3557;
-
-}
-/* =========================
-   MODAL
+   MESSAGE MODAL
 ========================= */
 
 
@@ -730,10 +770,12 @@ tbody tr:hover{
     display:none;
     align-items:center;
     justify-content:center;
-    z-index:2000;
     padding:20px;
+    z-index:2000;
 
 }
+
+
 
 
 
@@ -750,12 +792,12 @@ tbody tr:hover{
 .modal-content{
 
     background:white;
-    width:500px;
+    width:550px;
     max-width:100%;
-    border-radius:20px;
     padding:30px;
+    border-radius:20px;
     box-shadow:0 10px 40px rgba(0,0,0,.25);
-    animation:slideDown .3s ease;
+    animation:popup .3s ease;
     max-height:90vh;
     overflow-y:auto;
 
@@ -777,6 +819,98 @@ tbody tr:hover{
 
 
 
+.modal-content h3{
+
+    color:#1d3557;
+    margin:20px 0 10px;
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   MESSAGE DETAILS
+========================= */
+
+
+.message-details{
+
+    background:#f8faff;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+.message-details p{
+
+    margin-bottom:12px;
+    line-height:1.5;
+
+}
+
+
+
+
+
+.message-details strong{
+
+    color:#1d3557;
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   REPLY BOX
+========================= */
+
+
+#replyMessage{
+
+    width:100%;
+    height:130px;
+    resize:none;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    outline:none;
+    font-size:14px;
+
+}
+
+
+
+
+
+#replyMessage:focus{
+
+    border-color:#0066ff;
+
+}
+
+
+
+
+
+
+
 
 
 /* =========================
@@ -787,9 +921,8 @@ tbody tr:hover{
 .modal-buttons{
 
     display:flex;
-    gap:12px;
-    margin-top:25px;
-    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
 
 }
 
@@ -803,23 +936,27 @@ tbody tr:hover{
     padding:13px;
     border:none;
     border-radius:10px;
+    color:white;
     cursor:pointer;
     font-weight:600;
-    color:white;
 
 }
 
 
 
-#confirmBooking{
 
-    background:#28a745;
+
+#sendReply{
+
+    background:#0066ff;
 
 }
 
 
 
-#cancelBooking{
+
+
+#deleteMessage{
 
     background:#dc3545;
 
@@ -827,11 +964,15 @@ tbody tr:hover{
 
 
 
-#closeBooking{
+
+
+#closeMessage{
 
     background:#6c757d;
 
 }
+
+
 
 
 
@@ -854,7 +995,6 @@ tbody tr:hover{
 ========================= */
 
 
-
 @media(max-width:1100px){
 
 
@@ -866,6 +1006,10 @@ tbody tr:hover{
 
 
 }
+
+
+
+
 
 
 
@@ -884,6 +1028,8 @@ tbody tr:hover{
 
 
 
+
+
 .sidebar.active{
 
     transform:translateX(0);
@@ -893,11 +1039,13 @@ tbody tr:hover{
 
 
 
+
 #closeMenu{
 
     display:block;
 
 }
+
 
 
 
@@ -917,16 +1065,6 @@ tbody tr:hover{
 
     display:block;
     margin-bottom:15px;
-
-}
-
-
-
-
-
-.topbar{
-
-    padding:18px;
 
 }
 
@@ -955,9 +1093,6 @@ tbody tr:hover{
 
 
 }
-
-
-
 
 
 
@@ -1050,13 +1185,25 @@ tbody tr:hover{
 ========================= */
 
 
-@keyframes slideDown{
+.card,
+.toolbar,
+.table-container{
+
+    animation:fadeIn .4s ease;
+
+}
+
+
+
+
+
+@keyframes fadeIn{
 
 
 from{
 
     opacity:0;
-    transform:translateY(-30px);
+    transform:translateY(15px);
 
 }
 
@@ -1076,30 +1223,25 @@ to{
 
 
 
+@keyframes popup{
 
 
-/* LOADING EFFECT */
+from{
 
-
-.loading{
-
-    text-align:center;
-    padding:30px;
-    color:#0066ff;
+    opacity:0;
+    transform:scale(.9);
 
 }
 
 
 
+to{
 
-/* SMOOTH TRANSITIONS */
-
-
-button,
-select,
-input,
-.card{
-
-    transition:.3s;
+    opacity:1;
+    transform:scale(1);
 
 }
+
+
+}
+

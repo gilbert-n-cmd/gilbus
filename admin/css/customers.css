@@ -3,12 +3,10 @@
 ========================= */
 
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
-
 }
 
 
@@ -20,14 +18,12 @@ body{
 }
 
 
-
 a{
 
     text-decoration:none;
     color:inherit;
 
 }
-
 
 
 ul{
@@ -43,7 +39,6 @@ ul{
 /* =========================
    SIDEBAR
 ========================= */
-
 
 .sidebar{
 
@@ -62,7 +57,6 @@ ul{
 }
 
 
-
 .sidebar-header{
 
     display:flex;
@@ -71,7 +65,6 @@ ul{
     margin-bottom:30px;
 
 }
-
 
 
 .logo{
@@ -83,13 +76,11 @@ ul{
 }
 
 
-
 .logo i{
 
     font-size:30px;
 
 }
-
 
 
 .logo h2{
@@ -107,10 +98,8 @@ ul{
     border:none;
     color:white;
     font-size:22px;
-    cursor:pointer;
 
 }
-
 
 
 
@@ -135,10 +124,9 @@ ul{
     display:flex;
     align-items:center;
     gap:15px;
-    padding:13px;
+    padding:13px 15px;
     border-radius:10px;
     transition:.3s;
-    font-size:15px;
 
 }
 
@@ -154,48 +142,30 @@ ul{
 
 
 
-
-
 #logoutBtn{
 
     background:#dc3545;
-    border:none;
     color:white;
+    border:none;
     padding:14px;
     border-radius:10px;
     cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
 
 }
-
-
-
-#logoutBtn:hover{
-
-    background:#b52a37;
-
-}
-
-
-
 
 
 
 
 
 /* =========================
-   MAIN CONTENT
+   MAIN
 ========================= */
 
 
 .main{
 
     margin-left:260px;
-    padding:25px;
-    min-height:100vh;
+    padding:20px 30px;
 
 }
 
@@ -209,11 +179,8 @@ ul{
     border:none;
     padding:10px 15px;
     border-radius:8px;
-    cursor:pointer;
 
 }
-
-
 
 
 
@@ -227,22 +194,21 @@ ul{
 .topbar{
 
     background:white;
-    padding:20px 25px;
+    height:70px;
     border-radius:15px;
+    padding:0 25px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
     box-shadow:0 5px 15px rgba(0,0,0,.05);
     margin-bottom:30px;
 
 }
 
 
-
 .topbar h2{
 
     color:#1d3557;
-    font-size:25px;
 
 }
 
@@ -255,7 +221,6 @@ ul{
     gap:10px;
 
 }
-
 
 
 .admin-profile i{
@@ -272,7 +237,7 @@ ul{
 
 
 /* =========================
-   STATISTICS CARDS
+   CARDS
 ========================= */
 
 
@@ -294,17 +259,8 @@ ul{
     border-radius:15px;
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:15px;
     box-shadow:0 5px 15px rgba(0,0,0,.06);
-    transition:.3s;
-
-}
-
-
-
-.card:hover{
-
-    transform:translateY(-5px);
 
 }
 
@@ -314,7 +270,6 @@ ul{
 
     font-size:28px;
     color:#1d3557;
-    margin-bottom:5px;
 
 }
 
@@ -323,11 +278,8 @@ ul{
 .card p{
 
     color:#777;
-    font-size:14px;
 
 }
-
-
 
 
 
@@ -346,36 +298,39 @@ ul{
 
 
 
-
-.card-icon.blue{
+.blue{
 
     background:#0066ff;
 
 }
 
 
-
-.card-icon.green{
+.green{
 
     background:#28a745;
 
 }
 
 
-
-.card-icon.orange{
+.orange{
 
     background:#ff9800;
 
 }
 
 
-
-.card-icon.red{
+.red{
 
     background:#dc3545;
 
 }
+
+
+
+
+
+
+
 /* =========================
    TOOLBAR
 ========================= */
@@ -387,11 +342,9 @@ ul{
     padding:20px;
     border-radius:15px;
     display:flex;
-    align-items:center;
     gap:15px;
     margin-bottom:25px;
     box-shadow:0 5px 15px rgba(0,0,0,.05);
-    flex-wrap:wrap;
 
 }
 
@@ -400,11 +353,10 @@ ul{
 .toolbar input,
 .toolbar select{
 
-    padding:13px 15px;
+    padding:13px;
     border:1px solid #ddd;
     border-radius:10px;
     outline:none;
-    font-size:14px;
 
 }
 
@@ -412,19 +364,22 @@ ul{
 
 .toolbar input{
 
-    width:320px;
+    flex:1;
 
 }
 
 
 
-.toolbar input:focus,
-.toolbar select:focus{
+#addCustomerBtn{
 
-    border-color:#0066ff;
+    background:#0066ff;
+    color:white;
+    border:none;
+    padding:13px 25px;
+    border-radius:10px;
+    cursor:pointer;
 
 }
-
 
 
 
@@ -432,7 +387,7 @@ ul{
 
 
 /* =========================
-   TABLE CONTAINER
+   TABLE
 ========================= */
 
 
@@ -442,11 +397,8 @@ ul{
     padding:20px;
     border-radius:15px;
     overflow-x:auto;
-    box-shadow:0 5px 15px rgba(0,0,0,.05);
 
 }
-
-
 
 
 
@@ -454,33 +406,19 @@ table{
 
     width:100%;
     border-collapse:collapse;
-    min-width:1100px;
+    min-width:900px;
 
 }
-
-
-
-
-
-thead{
-
-    background:#f1f5ff;
-
-}
-
 
 
 
 th{
 
+    background:#f1f5ff;
     padding:15px;
     text-align:left;
-    font-size:14px;
-    color:#1d3557;
 
 }
-
-
 
 
 
@@ -488,10 +426,8 @@ td{
 
     padding:15px;
     border-bottom:1px solid #eee;
-    font-size:14px;
 
 }
-
 
 
 
@@ -505,11 +441,16 @@ tbody tr:hover{
 
 
 
-.empty-message{
 
-    text-align:center;
-    padding:30px;
-    color:#777;
+/* CUSTOMER IMAGE */
+
+
+.customer-img{
+
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
 
 }
 
@@ -517,31 +458,20 @@ tbody tr:hover{
 
 
 
-
-
-/* =========================
-   STATUS BADGES
-========================= */
+/* STATUS */
 
 
 .status{
 
-    padding:6px 14px;
+    padding:6px 15px;
     border-radius:20px;
     font-size:13px;
-    font-weight:600;
-    display:inline-block;
 
 }
 
 
 
-
-
-/* BOOKING STATUS */
-
-
-.status.confirmed{
+.status.active{
 
     background:#d4edda;
     color:#198754;
@@ -550,16 +480,7 @@ tbody tr:hover{
 
 
 
-.status.pending{
-
-    background:#fff3cd;
-    color:#997404;
-
-}
-
-
-
-.status.cancelled{
+.status.blocked{
 
     background:#f8d7da;
     color:#dc3545;
@@ -571,58 +492,7 @@ tbody tr:hover{
 
 
 
-
-/* PAYMENT STATUS */
-
-
-.payment-paid{
-
-    background:#d4edda;
-    color:#198754;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:600;
-
-}
-
-
-
-
-.payment-pending{
-
-    background:#fff3cd;
-    color:#997404;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:600;
-
-}
-
-
-
-
-.payment-failed{
-
-    background:#f8d7da;
-    color:#dc3545;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:600;
-
-}
-
-
-
-
-
-
-
-/* =========================
-   ACTION BUTTONS
-========================= */
+/* ACTIONS */
 
 
 .actions{
@@ -634,7 +504,6 @@ tbody tr:hover{
 
 
 
-
 .actions button{
 
     width:35px;
@@ -643,9 +512,6 @@ tbody tr:hover{
     border-radius:8px;
     color:white;
     cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
 
 }
 
@@ -659,15 +525,15 @@ tbody tr:hover{
 
 
 
-.confirm-btn{
+.edit-btn{
 
-    background:#28a745;
+    background:#0066ff;
 
 }
 
 
 
-.cancel-btn{
+.delete-btn{
 
     background:#dc3545;
 
@@ -675,45 +541,8 @@ tbody tr:hover{
 
 
 
-.actions button:hover{
-
-    opacity:.8;
-
-}
 
 
-
-
-
-/* =========================
-   BOOKING DETAILS
-========================= */
-
-
-.booking-details{
-
-    display:grid;
-    gap:15px;
-
-}
-
-
-
-.booking-details p{
-
-    background:#f8f9fa;
-    padding:12px;
-    border-radius:10px;
-
-}
-
-
-
-.booking-details strong{
-
-    color:#1d3557;
-
-}
 /* =========================
    MODAL
 ========================= */
@@ -722,16 +551,12 @@ tbody tr:hover{
 .modal{
 
     position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    inset:0;
     background:rgba(0,0,0,.5);
     display:none;
     align-items:center;
     justify-content:center;
     z-index:2000;
-    padding:20px;
 
 }
 
@@ -745,55 +570,55 @@ tbody tr:hover{
 
 
 
-
-
 .modal-content{
 
     background:white;
-    width:500px;
-    max-width:100%;
-    border-radius:20px;
+    width:450px;
     padding:30px;
-    box-shadow:0 10px 40px rgba(0,0,0,.25);
-    animation:slideDown .3s ease;
-    max-height:90vh;
-    overflow-y:auto;
+    border-radius:20px;
 
 }
-
-
 
 
 
 .modal-content h2{
 
     text-align:center;
-    color:#1d3557;
-    margin-bottom:25px;
+    margin-bottom:20px;
 
 }
 
 
 
+.modal-content label{
+
+    display:block;
+    margin-bottom:6px;
+    font-weight:600;
+
+}
 
 
 
+.modal-content input,
+.modal-content select{
 
-/* =========================
-   MODAL BUTTONS
-========================= */
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+
+}
+
 
 
 .modal-buttons{
 
     display:flex;
-    gap:12px;
-    margin-top:25px;
-    flex-wrap:wrap;
+    gap:15px;
 
 }
-
-
 
 
 
@@ -804,45 +629,25 @@ tbody tr:hover{
     border:none;
     border-radius:10px;
     cursor:pointer;
-    font-weight:600;
+
+}
+
+
+
+.modal-buttons button:first-child{
+
+    background:#0066ff;
     color:white;
 
 }
 
 
 
-#confirmBooking{
+.modal-buttons button:last-child{
 
-    background:#28a745;
-
-}
-
-
-
-#cancelBooking{
-
-    background:#dc3545;
+    background:#ddd;
 
 }
-
-
-
-#closeBooking{
-
-    background:#6c757d;
-
-}
-
-
-
-.modal-buttons button:hover{
-
-    opacity:.85;
-
-}
-
-
-
 
 
 
@@ -850,12 +655,11 @@ tbody tr:hover{
 
 
 /* =========================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ========================= */
 
 
-
-@media(max-width:1100px){
+@media(max-width:1000px){
 
 
 .cards{
@@ -869,10 +673,7 @@ tbody tr:hover{
 
 
 
-
-
 @media(max-width:900px){
-
 
 
 .sidebar{
@@ -883,7 +684,6 @@ tbody tr:hover{
 }
 
 
-
 .sidebar.active{
 
     transform:translateX(0);
@@ -891,80 +691,35 @@ tbody tr:hover{
 }
 
 
-
-
-#closeMenu{
+#closeMenu,
+.menu-btn{
 
     display:block;
 
 }
-
-
 
 
 .main{
 
     margin-left:0;
-    padding:15px;
 
 }
-
-
-
-
-
-.menu-btn{
-
-    display:block;
-    margin-bottom:15px;
-
-}
-
-
-
-
-
-.topbar{
-
-    padding:18px;
-
-}
-
-
 
 
 
 .toolbar{
 
     flex-direction:column;
-    align-items:stretch;
-
-}
-
-
-
-
-
-.toolbar input,
-.toolbar select{
-
-    width:100%;
 
 }
 
 
 
 }
-
-
-
-
-
 
 
 
 @media(max-width:600px){
-
 
 
 .cards{
@@ -975,8 +730,6 @@ tbody tr:hover{
 
 
 
-
-
 .topbar h2{
 
     font-size:20px;
@@ -984,122 +737,12 @@ tbody tr:hover{
 }
 
 
-
-
-
-.admin-profile span{
-
-    display:none;
-
-}
-
-
-
-
-
-.card{
-
-    padding:20px;
-
-}
-
-
-
-
-
 .modal-content{
 
-    padding:20px;
-
-}
-
-
-
-
-
-.modal-buttons{
-
-    flex-direction:column;
-
-}
-
-
-
-
-
-.modal-buttons button{
-
-    width:100%;
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-/* =========================
-   ANIMATIONS
-========================= */
-
-
-@keyframes slideDown{
-
-
-from{
-
-    opacity:0;
-    transform:translateY(-30px);
-
-}
-
-
-
-to{
-
-    opacity:1;
-    transform:translateY(0);
+    width:90%;
 
 }
 
 
 }
 
-
-
-
-
-
-
-/* LOADING EFFECT */
-
-
-.loading{
-
-    text-align:center;
-    padding:30px;
-    color:#0066ff;
-
-}
-
-
-
-
-/* SMOOTH TRANSITIONS */
-
-
-button,
-select,
-input,
-.card{
-
-    transition:.3s;
-
-}

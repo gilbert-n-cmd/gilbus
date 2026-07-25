@@ -1,0 +1,83 @@
+/* ==========================
+   MOBILE MENU BUTTON
+========================== */
+
+.menu-btn{
+
+    display:none;
+
+    background:#0066ff;
+
+    color:white;
+
+    border:none;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:10px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    margin-bottom:15px;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.menu-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+}
+
+.sidebar-header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+
+#closeMenu{
+
+display:none;
+
+background:none;
+
+border:none;
+
+color:white;
+
+font-size:25px;
+
+cursor:pointer;
+
+}
+
+
+
+@media(max-width:768px){
+
+#closeMenu{
+
+display:block;
+
+}
+
+}
+

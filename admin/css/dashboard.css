@@ -1,0 +1,638 @@
+/* =====================================
+   BUSGO ADMIN DASHBOARD CSS
+===================================== */
+
+
+/* RESET */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+body{
+
+    background:#f4f7fb;
+    color:#333;
+    display:flex;
+
+}
+
+
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+
+.sidebar{
+
+    width:260px;
+    height:100vh;
+
+    background:#0f172a;
+
+    color:white;
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    padding:25px 20px;
+
+    overflow-y:auto;
+
+}
+
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.logo i{
+
+    font-size:35px;
+
+    color:#0066ff;
+
+}
+
+
+
+.logo h2{
+
+    font-size:25px;
+
+}
+
+
+
+
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+
+
+.sidebar ul li{
+
+    margin:8px 0;
+
+}
+
+
+
+.sidebar ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:14px;
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a{
+
+    background:#0066ff;
+
+    color:white;
+
+}
+
+
+
+.sidebar ul li i{
+
+    width:20px;
+
+}
+
+
+
+
+
+/* LOGOUT BUTTON */
+
+
+#logoutBtn{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:20px;
+
+    width:220px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ef4444;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+
+#logoutBtn:hover{
+
+    background:#dc2626;
+
+}
+
+
+
+
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+
+.main{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    padding:25px;
+
+}
+
+
+
+
+/* =====================================
+   TOPBAR
+===================================== */
+
+
+.topbar{
+
+    background:white;
+
+    padding:20px 25px;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+
+    margin-bottom:30px;
+
+}
+
+
+
+.topbar h2{
+
+    font-size:28px;
+
+}
+
+
+
+
+.admin-profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
+
+}
+
+
+
+.admin-profile i{
+
+    font-size:35px;
+
+    color:#0066ff;
+
+}
+
+
+
+
+
+/* =====================================
+   DASHBOARD CARDS
+===================================== */
+
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+
+.card{
+
+    background:white;
+
+    padding:30px 20px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.card i{
+
+    font-size:40px;
+
+    color:#0066ff;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.card h3{
+
+    font-size:35px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.card p{
+
+    color:#666;
+
+}
+
+
+
+
+
+/* =====================================
+   TABLE
+===================================== */
+
+
+.dashboard-table{
+
+    background:white;
+
+    margin-top:35px;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+
+.dashboard-table h2{
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+table th{
+
+    background:#0066ff;
+
+    color:white;
+
+    padding:15px;
+
+    text-align:left;
+
+}
+
+
+
+table td{
+
+    padding:15px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+
+
+
+/* =====================================
+   MOBILE SIDEBAR
+===================================== */
+
+
+.menu-toggle{
+
+    display:none;
+
+}
+
+
+
+
+@media(max-width:1100px){
+
+
+.cards{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+
+body{
+
+    display:block;
+
+}
+
+
+
+
+.sidebar{
+
+    left:-260px;
+
+    transition:.4s;
+
+    z-index:1000;
+
+}
+
+
+
+.sidebar.active{
+
+    left:0;
+
+}
+
+
+
+
+.main{
+
+    margin-left:0;
+
+    width:100%;
+
+    padding:15px;
+
+}
+
+
+
+
+.topbar{
+
+    padding:15px;
+
+}
+
+
+
+.topbar h2{
+
+    font-size:22px;
+
+}
+
+
+
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+
+.dashboard-table{
+
+    overflow-x:auto;
+
+}
+
+
+
+table{
+
+    min-width:700px;
+
+}
+
+
+}
+
+
+
+/* SMALL DEVICES */
+
+
+@media(max-width:500px){
+
+
+.admin-profile span{
+
+    display:none;
+
+}
+
+
+
+.card h3{
+
+    font-size:30px;
+
+}
+
+
+
+}
+
+/* ==========================
+   MOBILE MENU BUTTON
+========================== */
+
+.menu-btn{
+
+    display:none;
+
+    background:#0066ff;
+
+    color:white;
+
+    border:none;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:10px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    margin-bottom:15px;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+.menu-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+}
+
+.sidebar-header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+
+#closeMenu{
+
+display:none;
+
+background:none;
+
+border:none;
+
+color:white;
+
+font-size:25px;
+
+cursor:pointer;
+
+}
+
+
+
+@media(max-width:768px){
+
+#closeMenu{
+
+display:block;
+
+}
+
+}
