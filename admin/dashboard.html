@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BusGo Admin Dashboard</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- SIDEBAR -->
+<div class="sidebar-header">
+
+<div class="logo">
+
+<i class="fa-solid fa-bus"></i>
+
+<h2>BusGo</h2>
+
+</div>
+
+
+<button id="closeMenu">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-bus"></i>
+
+<h2>BusGo</h2>
+
+</div>
+
+
+
+<ul>
+
+
+<li class="active">
+<a href="dashboard.html">
+<i class="fa fa-chart-line"></i>
+Dashboard
+</a>
+</li>
+
+
+<li>
+<a href="buses.html">
+<i class="fa fa-bus"></i>
+Manage Buses
+</a>
+</li>
+
+
+<li>
+<a href="routes.html">
+<i class="fa fa-route"></i>
+Manage Routes
+</a>
+</li>
+
+
+
+<li>
+<a href="companies.html">
+<i class="fa fa-building"></i>
+Bus Companies
+</a>
+</li>
+
+
+
+<li>
+<a href="drivers.html">
+<i class="fa fa-user-tie"></i>
+Drivers
+</a>
+</li>
+
+
+
+<li>
+<a href="customers.html">
+<i class="fa fa-users"></i>
+Customers
+</a>
+</li>
+
+
+
+<li>
+<a href="bookings.html">
+<i class="fa fa-ticket"></i>
+Bookings
+</a>
+</li>
+
+
+
+<li>
+<a href="payments.html">
+<i class="fa fa-money-bill"></i>
+Payments
+</a>
+</li>
+
+
+
+<li>
+<a href="reports.html">
+<i class="fa fa-file"></i>
+Reports
+</a>
+</li>
+
+
+
+<li>
+<a href="messages.html">
+<i class="fa fa-envelope"></i>
+Messages
+</a>
+</li>
+
+
+
+<li>
+<a href="notifications.html">
+<i class="fa fa-bell"></i>
+Notifications
+</a>
+</li>
+
+
+
+<li>
+<a href="settings.html">
+<i class="fa fa-gear"></i>
+Settings
+</a>
+</li>
+
+
+</ul>
+
+
+
+<button id="logoutBtn">
+
+<i class="fa fa-sign-out"></i>
+
+Logout
+
+</button>
+
+
+</aside>
+
+
+
+
+
+
+<!-- MAIN CONTENT -->
+
+
+<main class="main">
+
+<!-- MOBILE MENU BUTTON -->
+
+
+  
+<header class="topbar">
+
+<button class="menu-btn" id="menuBtn">
+
+    <i class="fa-solid fa-bars"></i>
+
+</button>
+<h2>
+Dashboard
+</h2>
+
+
+<div class="admin-profile">
+
+<i class="fa fa-user-circle"></i>
+
+<span id="adminName">
+Administrator
+</span>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+<section class="cards">
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-bus"></i>
+
+<h3 id="totalBuses">
+0
+</h3>
+
+<p>
+Total Buses
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-route"></i>
+
+<h3 id="totalRoutes">
+0
+</h3>
+
+<p>
+Routes
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-building"></i>
+
+<h3 id="totalCompanies">
+0
+</h3>
+
+<p>
+Companies
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-user-tie"></i>
+
+<h3 id="totalDrivers">
+0
+</h3>
+
+<p>
+Drivers
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h3 id="totalCustomers">
+0
+</h3>
+
+<p>
+Customers
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-ticket"></i>
+
+<h3 id="totalBookings">
+0
+</h3>
+
+<p>
+Bookings
+</p>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+<h3 id="totalPayments">
+0
+</h3>
+
+<p>
+Payments
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<section class="dashboard-table">
+
+
+<h2>
+Recent Bookings
+</h2>
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>
+Passenger
+</th>
+
+<th>
+Route
+</th>
+
+<th>
+Date
+</th>
+
+<th>
+Status
+</th>
+
+</tr>
+
+</thead>
+
+
+
+<tbody id="recentBookings">
+
+
+<tr>
+
+<td colspan="4">
+No bookings available
+</td>
+
+</tr>
+
+
+</tbody>
+
+
+
+</table>
+
+
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+
+<script type="module" src="js/dashboard.js"></script>
+    <script src="js/sidebar.js"></script>
+
+</body>
+
+</html>
