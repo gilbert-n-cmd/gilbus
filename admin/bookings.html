@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manage Bookings | BusGo Admin</title>
+
+<link rel="stylesheet" href="css/bookings.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     SIDEBAR
+========================= -->
+
+
+<aside class="sidebar">
+
+
+<div class="sidebar-header">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-bus"></i>
+
+<h2>BusGo</h2>
+
+</div>
+
+
+
+<button id="closeMenu">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+</div>
+
+
+
+
+
+<ul>
+
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="buses.html">
+
+<i class="fa-solid fa-bus"></i>
+
+Manage Buses
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="routes.html">
+
+<i class="fa-solid fa-route"></i>
+
+Manage Routes
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="companies.html">
+
+<i class="fa-solid fa-building"></i>
+
+Bus Companies
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="drivers.html">
+
+<i class="fa-solid fa-user-tie"></i>
+
+Drivers
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="customers.html">
+
+<i class="fa-solid fa-users"></i>
+
+Customers
+
+</a>
+
+</li>
+
+
+
+
+<li class="active">
+
+<a href="bookings.html">
+
+<i class="fa-solid fa-ticket"></i>
+
+Bookings
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="payments.html">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+Payments
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="reports.html">
+
+<i class="fa-solid fa-chart-column"></i>
+
+Reports
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="messages.html">
+
+<i class="fa-solid fa-envelope"></i>
+
+Messages
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="notifications.html">
+
+<i class="fa-solid fa-bell"></i>
+
+Notifications
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+
+
+
+<button id="logoutBtn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+
+</aside>
+
+
+
+
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+
+<main class="main">
+
+
+
+
+
+
+
+
+<header class="topbar">
+
+ <button class="menu-btn" id="menuBtn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+<h2>
+Manage Bookings
+</h2>
+
+
+
+<div class="admin-profile">
+
+
+<i class="fa-solid fa-user-circle"></i>
+
+
+<span id="adminName">
+
+Administrator
+
+</span>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+<!-- =========================
+ BOOKING STATISTICS
+========================= -->
+
+
+<section class="cards">
+
+
+
+<div class="card">
+
+<div class="card-icon blue">
+
+<i class="fa-solid fa-ticket"></i>
+
+</div>
+
+
+<div>
+
+<h3 id="totalBookings">
+
+0
+
+</h3>
+
+
+<p>
+
+Total Bookings
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon green">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+
+<div>
+
+<h3 id="confirmedBookings">
+
+0
+
+</h3>
+
+
+<p>
+
+Confirmed
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon orange">
+
+<i class="fa-solid fa-clock"></i>
+
+</div>
+
+
+<div>
+
+
+<h3 id="pendingBookings">
+
+0
+
+</h3>
+
+
+<p>
+
+Pending
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon red">
+
+<i class="fa-solid fa-ban"></i>
+
+</div>
+
+
+<div>
+
+
+<h3 id="cancelledBookings">
+
+0
+
+</h3>
+
+
+<p>
+
+Cancelled
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- =========================
+ TOOLBAR
+========================= -->
+
+
+<section class="toolbar">
+
+
+
+<input
+
+type="text"
+
+id="searchBooking"
+
+placeholder="Search passenger, route or ticket..."
+
+>
+
+
+
+
+
+<select id="filterRoute">
+
+
+<option value="">
+
+All Routes
+
+</option>
+
+
+</select>
+
+
+
+
+
+
+<select id="filterPayment">
+
+
+<option value="">
+
+All Payments
+
+</option>
+
+
+<option value="Paid">
+
+Paid
+
+</option>
+
+
+<option value="Pending">
+
+Pending
+
+</option>
+
+
+<option value="Failed">
+
+Failed
+
+</option>
+
+
+</select>
+
+
+
+
+
+
+<select id="filterStatus">
+
+
+<option value="">
+
+All Status
+
+</option>
+
+
+
+<option value="Confirmed">
+
+Confirmed
+
+</option>
+
+
+
+<option value="Pending">
+
+Pending
+
+</option>
+
+
+
+<option value="Cancelled">
+
+Cancelled
+
+</option>
+
+
+
+</select>
+
+
+
+</section>
+  
+<!-- =========================
+     BOOKINGS TABLE
+========================= -->
+
+
+<div class="table-container">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+Ticket ID
+</th>
+
+
+<th>
+Passenger
+</th>
+
+
+<th>
+Phone
+</th>
+
+
+<th>
+Route
+</th>
+
+
+<th>
+Travel Date
+</th>
+
+
+<th>
+Seat
+</th>
+
+
+<th>
+Amount
+</th>
+
+
+<th>
+Payment
+</th>
+
+
+<th>
+Status
+</th>
+
+
+<th>
+Actions
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody id="bookingTable">
+
+
+<tr>
+
+
+<td colspan="10" class="empty-message">
+
+
+No bookings found.
+
+
+</td>
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+<!-- =========================
+     VIEW BOOKING MODAL
+========================= -->
+
+
+<div class="modal" id="bookingModal">
+
+
+
+<div class="modal-content">
+
+
+
+<h2>
+
+Booking Details
+
+</h2>
+
+
+
+
+
+<div class="booking-details">
+
+
+
+
+
+<p>
+
+<strong>
+Ticket ID:
+</strong>
+
+<span id="ticketId">
+
+</span>
+
+</p>
+
+
+
+
+
+
+<p>
+
+<strong>
+Passenger:
+</strong>
+
+<span id="passengerName">
+
+</span>
+
+</p>
+
+
+
+
+
+
+
+<p>
+
+<strong>
+Phone:
+</strong>
+
+<span id="passengerPhone">
+
+</span>
+
+</p>
+
+
+
+
+
+
+
+<p>
+
+<strong>
+Route:
+</strong>
+
+<span id="bookingRoute">
+
+</span>
+
+</p>
+
+
+
+
+
+
+
+<p>
+
+<strong>
+Travel Date:
+</strong>
+
+<span id="travelDate">
+
+</span>
+
+</p>
+
+
+
+
+
+
+
+<p>
+
+<strong>
+Seat Number:
+</strong>
+
+<span id="seatNumber">
+
+</span>
+
+</p>
+
+
+
+
+
+
+
+<p>
+
+<strong>
+Amount:
+</strong>
+
+<span id="bookingAmount">
+
+</span>
+
+</p>
+
+
+
+
+
+
+
+<p>
+
+<strong>
+Payment Status:
+</strong>
+
+<span id="paymentStatus">
+
+</span>
+
+</p>
+
+
+
+
+
+
+
+<p>
+
+<strong>
+Booking Status:
+</strong>
+
+<span id="bookingStatus">
+
+</span>
+
+</p>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="modal-buttons">
+
+
+<button id="confirmBooking">
+
+Confirm Booking
+
+</button>
+
+
+
+<button id="cancelBooking">
+
+Cancel Booking
+
+</button>
+
+
+
+<button id="closeBooking">
+
+Close
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- =========================
+     SCRIPTS
+========================= -->
+
+
+<script type="module" src="js/bookings.js"></script>
+
+<script src="js/sidebar.js"></script>
+
+
+
+
+</body>
+
+
+  </html>
