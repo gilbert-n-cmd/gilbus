@@ -1,0 +1,914 @@
+/* ==========================================
+   BUSGO ADMIN - SETTINGS.CSS
+   PART 1
+   Global Styles, Layout, Sidebar & Topbar
+========================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fc;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* Links */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* Lists */
+
+ul{
+    list-style:none;
+}
+
+/* Images */
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* Buttons */
+
+button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Inputs */
+
+input,
+select,
+textarea{
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================================
+   MAIN LAYOUT
+========================================== */
+
+.admin-container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar{
+    width:260px;
+    background:#0d47a1;
+    color:#fff;
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    overflow-y:auto;
+    transition:.3s;
+    z-index:1000;
+    box-shadow:3px 0 15px rgba(0,0,0,.15);
+}
+
+.sidebar::-webkit-scrollbar{
+    width:5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background:#1565c0;
+}
+
+.logo{
+    padding:28px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.logo i{
+    font-size:34px;
+}
+
+.logo h2{
+    font-size:26px;
+    font-weight:700;
+}
+
+.sidebar ul{
+    padding:15px 0;
+}
+
+.sidebar ul li{
+    margin:4px 0;
+}
+
+.sidebar ul li a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:14px 22px;
+    transition:.3s;
+    font-size:15px;
+    font-weight:500;
+}
+
+.sidebar ul li a i{
+    width:22px;
+    text-align:center;
+    font-size:18px;
+}
+
+.sidebar ul li:hover a{
+    background:rgba(255,255,255,.12);
+}
+
+.sidebar ul li.active a{
+    background:#1565c0;
+    border-left:5px solid #ffca28;
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+.main-content{
+    margin-left:260px;
+    width:calc(100% - 260px);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* ==========================================
+   TOPBAR
+========================================== */
+
+.topbar{
+    background:#fff;
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:900;
+}
+
+.topbar h2{
+    font-size:24px;
+    font-weight:600;
+    color:#0d47a1;
+}
+
+#menuBtn{
+    width:45px;
+    height:45px;
+    display:none;
+    border-radius:8px;
+    background:#0d47a1;
+    color:#fff;
+    font-size:18px;
+    transition:.3s;
+}
+
+#menuBtn:hover{
+    background:#1565c0;
+}
+
+.admin-user{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.admin-user img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #0d47a1;
+}
+
+.admin-user span{
+    font-weight:600;
+    color:#444;
+}
+
+/* ==========================================
+   PAGE CONTENT
+========================================== */
+
+.main-content section{
+    margin:25px;
+}
+/* ==========================================
+   BUSGO ADMIN - SETTINGS.CSS
+   PART 2
+   Settings Cards, Forms, Buttons & Switches
+========================================== */
+
+/* ==========================
+   SETTINGS CARD
+========================== */
+
+.settings-card{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.settings-card:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+.settings-card h3{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#0d47a1;
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:25px;
+    padding-bottom:15px;
+    border-bottom:1px solid #eee;
+}
+
+.settings-card h3 i{
+    color:#1565c0;
+    font-size:22px;
+}
+
+/* ==========================
+   FORM GRID
+========================== */
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    margin-bottom:20px;
+}
+
+/* ==========================
+   INPUT GROUP
+========================== */
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    font-size:14px;
+    font-weight:600;
+    color:#444;
+    margin-bottom:8px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    width:100%;
+    padding:13px 15px;
+    border:1px solid #d6d6d6;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+    background:#fafafa;
+}
+
+.input-group textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+    border-color:#1565c0;
+    background:#fff;
+    box-shadow:0 0 0 3px rgba(21,101,192,.12);
+}
+
+/* Placeholder */
+
+input::placeholder,
+textarea::placeholder{
+    color:#999;
+}
+
+/* File Upload */
+
+input[type="file"]{
+    padding:10px;
+    background:#fff;
+    cursor:pointer;
+}
+
+/* ==========================
+   SAVE BUTTON
+========================== */
+
+.save-btn{
+    margin-top:10px;
+    padding:13px 30px;
+    background:#0d47a1;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.save-btn:hover{
+    background:#1565c0;
+    transform:translateY(-2px);
+}
+
+.save-btn:active{
+    transform:scale(.98);
+}
+
+/* Disabled */
+
+.save-btn:disabled{
+    background:#90a4ae;
+    cursor:not-allowed;
+}
+
+/* ==========================
+   SWITCHES
+========================== */
+
+.switch-box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 0;
+    border-bottom:1px solid #eee;
+}
+
+.switch-box:last-child{
+    border-bottom:none;
+}
+
+.switch-box label:first-child{
+    font-size:15px;
+    font-weight:500;
+    color:#444;
+}
+
+/* Toggle */
+
+.switch{
+    position:relative;
+    display:inline-block;
+    width:58px;
+    height:30px;
+}
+
+.switch input{
+    display:none;
+}
+
+.slider{
+    position:absolute;
+    inset:0;
+    background:#cfd8dc;
+    border-radius:34px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.slider::before{
+    content:"";
+    position:absolute;
+    width:24px;
+    height:24px;
+    left:3px;
+    bottom:3px;
+    background:#fff;
+    border-radius:50%;
+    transition:.3s;
+    box-shadow:0 2px 6px rgba(0,0,0,.2);
+}
+
+.switch input:checked + .slider{
+    background:#0d47a1;
+}
+
+.switch input:checked + .slider::before{
+    transform:translateX(28px);
+}
+
+/* ==========================
+   PROFILE IMAGE PREVIEW
+========================== */
+
+.profile-preview{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    overflow:hidden;
+    margin:15px auto 20px;
+    border:4px solid #1565c0;
+    background:#f5f5f5;
+}
+
+.profile-preview img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ==========================
+   ABOUT SECTION
+========================== */
+
+.settings-card p{
+    font-size:15px;
+    color:#555;
+    margin:10px 0;
+    line-height:1.6;
+}
+
+.settings-card strong{
+    color:#0d47a1;
+}
+
+/* ==========================
+   DIVIDER
+========================== */
+
+.divider{
+    width:100%;
+    height:1px;
+    background:#ececec;
+    margin:25px 0;
+}
+
+/* ==========================================
+   BUSGO ADMIN - SETTINGS.CSS
+   PART 3
+   Responsive Design, Mobile Menu, Alerts & Animations
+========================================== */
+
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media(max-width:1100px){
+
+    .sidebar{
+        left:-260px;
+    }
+
+    .sidebar.active{
+        left:0;
+    }
+
+    .main-content{
+        margin-left:0;
+        width:100%;
+    }
+
+    #menuBtn{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+}
+
+
+/* ==========================
+   TABLET DEVICES
+========================== */
+
+@media(max-width:768px){
+
+    .topbar{
+        height:65px;
+        padding:0 15px;
+    }
+
+    .topbar h2{
+        font-size:18px;
+    }
+
+    .admin-user span{
+        display:none;
+    }
+
+    .admin-user img{
+        width:40px;
+        height:40px;
+    }
+
+
+    .main-content section{
+        margin:15px;
+    }
+
+
+    .settings-card{
+        padding:18px;
+        border-radius:12px;
+    }
+
+
+    .settings-card h3{
+        font-size:18px;
+    }
+
+
+    .form-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+
+    .save-btn{
+        width:100%;
+        padding:14px;
+    }
+
+}
+
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media(max-width:480px){
+
+    .logo h2{
+        font-size:22px;
+    }
+
+
+    .topbar h2{
+        font-size:16px;
+    }
+
+
+    #menuBtn{
+        width:40px;
+        height:40px;
+    }
+
+
+    .settings-card{
+        padding:15px;
+    }
+
+
+    .settings-card h3{
+        font-size:17px;
+    }
+
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea{
+        font-size:14px;
+        padding:12px;
+    }
+
+
+    .switch-box{
+        gap:10px;
+    }
+
+}
+
+
+/* ==========================
+   SIDEBAR OVERLAY
+========================== */
+
+.sidebar-overlay{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:999;
+
+    display:none;
+
+}
+
+
+.sidebar-overlay.active{
+
+    display:block;
+
+}
+
+
+/* ==========================
+   LOADING SPINNER
+========================== */
+
+.loader{
+
+    width:35px;
+    height:35px;
+
+    border:4px solid #eee;
+    border-top:4px solid #0d47a1;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+    margin:auto;
+
+}
+
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+/* ==========================
+   ALERT MESSAGES
+========================== */
+
+.alert{
+
+    position:fixed;
+
+    top:90px;
+    right:25px;
+
+    padding:15px 25px;
+
+    border-radius:10px;
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    z-index:2000;
+
+    animation:slideIn .4s ease;
+
+}
+
+
+.alert.success{
+
+    background:#2e7d32;
+
+}
+
+
+.alert.error{
+
+    background:#c62828;
+
+}
+
+
+.alert.warning{
+
+    background:#f9a825;
+
+}
+
+
+/* Alert Animation */
+
+@keyframes slideIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(100px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+
+/* ==========================
+   FADE ANIMATION
+========================== */
+
+.fade-in{
+
+    animation:fadeIn .5s ease;
+
+}
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================
+   DARK MODE SUPPORT
+========================== */
+
+body.dark-mode{
+
+    background:#121212;
+
+    color:#fff;
+
+}
+
+
+body.dark-mode .topbar,
+body.dark-mode .settings-card{
+
+    background:#1e1e1e;
+
+    color:#fff;
+
+}
+
+
+body.dark-mode .settings-card h3{
+
+    color:#90caf9;
+
+}
+
+
+body.dark-mode .input-group input,
+body.dark-mode .input-group select,
+body.dark-mode .input-group textarea{
+
+    background:#2c2c2c;
+
+    color:#fff;
+
+    border-color:#444;
+
+}
+
+
+body.dark-mode .input-group label,
+body.dark-mode .switch-box label{
+
+    color:#ddd;
+
+}
+
+
+body.dark-mode .admin-user span{
+
+    color:#fff;
+
+}
+
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#f1f1f1;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#0d47a1;
+
+    border-radius:10px;
+
+}
+
+
+/* ==========================
+   UTILITY CLASSES
+========================== */
+
+.text-center{
+    text-align:center;
+}
+
+
+.hidden{
+    display:none;
+}
+
+
+.flex{
+    display:flex;
+}
+
+
+.align-center{
+    align-items:center;
+}
+
+
+.justify-between{
+    justify-content:space-between;
+}
+
+
+.mt-20{
+    margin-top:20px;
+}
+
+
+.mb-20{
+    margin-bottom:20px;
+}
+
