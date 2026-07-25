@@ -7,9 +7,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Manage Bookings | BusGo Admin</title>
+<title>Customers | BusGo Admin</title>
 
-<link rel="stylesheet" href="css/bookings.css">
+<link rel="stylesheet" href="css/customers.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -53,7 +53,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 
 
-
 <ul>
 
 
@@ -71,7 +70,6 @@ Dashboard
 
 
 
-
 <li>
 
 <a href="buses.html">
@@ -83,7 +81,6 @@ Manage Buses
 </a>
 
 </li>
-
 
 
 
@@ -101,7 +98,6 @@ Manage Routes
 
 
 
-
 <li>
 
 <a href="companies.html">
@@ -113,7 +109,6 @@ Bus Companies
 </a>
 
 </li>
-
 
 
 
@@ -132,7 +127,7 @@ Drivers
 
 
 
-<li>
+<li class="active">
 
 <a href="customers.html">
 
@@ -147,7 +142,7 @@ Customers
 
 
 
-<li class="active">
+<li>
 
 <a href="bookings.html">
 
@@ -235,6 +230,7 @@ Settings
 </li>
 
 
+
 </ul>
 
 
@@ -243,11 +239,15 @@ Settings
 
 <button id="logoutBtn">
 
+
 <i class="fa-solid fa-right-from-bracket"></i>
+
 
 Logout
 
+
 </button>
+
 
 
 </aside>
@@ -257,8 +257,9 @@ Logout
 
 
 
+
 <!-- =========================
-     MAIN CONTENT
+     MAIN
 ========================= -->
 
 
@@ -271,17 +272,23 @@ Logout
 
 
 
+
 <header class="topbar">
 
- <button class="menu-btn" id="menuBtn">
+<button class="menu-btn" id="menuBtn">
+
 
 <i class="fa-solid fa-bars"></i>
 
-</button>
 
+</button>
+  
 <h2>
-Manage Bookings
+
+Customers
+
 </h2>
+
 
 
 
@@ -301,6 +308,7 @@ Administrator
 </div>
 
 
+
 </header>
 
 
@@ -309,8 +317,9 @@ Administrator
 
 
 
+
 <!-- =========================
- BOOKING STATISTICS
+     STATISTICS
 ========================= -->
 
 
@@ -320,16 +329,17 @@ Administrator
 
 <div class="card">
 
+
 <div class="card-icon blue">
 
-<i class="fa-solid fa-ticket"></i>
+<i class="fa-solid fa-users"></i>
 
 </div>
 
 
 <div>
 
-<h3 id="totalBookings">
+<h3 id="totalCustomers">
 
 0
 
@@ -338,7 +348,7 @@ Administrator
 
 <p>
 
-Total Bookings
+Total Customers
 
 </p>
 
@@ -353,20 +363,19 @@ Total Bookings
 
 
 
-
 <div class="card">
 
 
 <div class="card-icon green">
 
-<i class="fa-solid fa-circle-check"></i>
+<i class="fa-solid fa-user-check"></i>
 
 </div>
 
 
 <div>
 
-<h3 id="confirmedBookings">
+<h3 id="activeCustomers">
 
 0
 
@@ -375,7 +384,7 @@ Total Bookings
 
 <p>
 
-Confirmed
+Active Customers
 
 </p>
 
@@ -396,15 +405,14 @@ Confirmed
 
 <div class="card-icon orange">
 
-<i class="fa-solid fa-clock"></i>
+<i class="fa-solid fa-user-plus"></i>
 
 </div>
 
 
 <div>
 
-
-<h3 id="pendingBookings">
+<h3 id="newCustomers">
 
 0
 
@@ -413,7 +421,7 @@ Confirmed
 
 <p>
 
-Pending
+New Customers
 
 </p>
 
@@ -434,15 +442,14 @@ Pending
 
 <div class="card-icon red">
 
-<i class="fa-solid fa-ban"></i>
+<i class="fa-solid fa-user-slash"></i>
 
 </div>
 
 
 <div>
 
-
-<h3 id="cancelledBookings">
+<h3 id="blockedCustomers">
 
 0
 
@@ -451,7 +458,7 @@ Pending
 
 <p>
 
-Cancelled
+Blocked Customers
 
 </p>
 
@@ -466,84 +473,27 @@ Cancelled
 </section>
 
 
-
-
-
-
-<!-- =========================
- TOOLBAR
+<!-- Continue Part 2 -->
+  <!-- =========================
+     TOOLBAR
 ========================= -->
 
 
 <section class="toolbar">
 
 
+<div class="search-box">
+
+<i class="fa-solid fa-search"></i>
+
 
 <input
-
 type="text"
-
-id="searchBooking"
-
-placeholder="Search passenger, route or ticket..."
-
->
+id="searchCustomer"
+placeholder="Search customer...">
 
 
-
-
-
-<select id="filterRoute">
-
-
-<option value="">
-
-All Routes
-
-</option>
-
-
-</select>
-
-
-
-
-
-
-<select id="filterPayment">
-
-
-<option value="">
-
-All Payments
-
-</option>
-
-
-<option value="Paid">
-
-Paid
-
-</option>
-
-
-<option value="Pending">
-
-Pending
-
-</option>
-
-
-<option value="Failed">
-
-Failed
-
-</option>
-
-
-</select>
-
-
+</div>
 
 
 
@@ -553,110 +503,134 @@ Failed
 
 <option value="">
 
-All Status
+All Customers
 
 </option>
 
 
+<option value="Active">
 
-<option value="Confirmed">
-
-Confirmed
-
-</option>
-
-
-
-<option value="Pending">
-
-Pending
+Active
 
 </option>
 
 
+<option value="Blocked">
 
-<option value="Cancelled">
-
-Cancelled
+Blocked
 
 </option>
-
 
 
 </select>
 
 
 
+
+
 </section>
-  
+
+
+
+
+
+
+
+
 <!-- =========================
-     BOOKINGS TABLE
+     CUSTOMERS TABLE
 ========================= -->
 
 
 <div class="table-container">
 
 
+
 <table>
 
 
+
 <thead>
+
 
 
 <tr>
 
 
 <th>
-Ticket ID
+
+Photo
+
 </th>
 
 
+
 <th>
-Passenger
+
+Customer ID
+
 </th>
 
 
+
 <th>
+
+Full Name
+
+</th>
+
+
+
+<th>
+
 Phone
+
 </th>
 
 
+
 <th>
-Route
+
+Email
+
 </th>
 
 
+
 <th>
-Travel Date
+
+Location
+
 </th>
 
 
+
 <th>
-Seat
+
+Bookings
+
 </th>
 
 
-<th>
-Amount
-</th>
-
 
 <th>
-Payment
-</th>
 
-
-<th>
 Status
+
 </th>
+
 
 
 <th>
+
 Actions
+
 </th>
+
 
 
 </tr>
+
 
 
 </thead>
@@ -665,22 +639,27 @@ Actions
 
 
 
-<tbody id="bookingTable">
+
+<tbody id="customerTable">
+
 
 
 <tr>
 
 
-<td colspan="10" class="empty-message">
+
+<td colspan="9" class="empty-message">
 
 
-No bookings found.
+No customers found.
 
 
 </td>
 
 
+
 </tr>
+
 
 
 
@@ -691,13 +670,9 @@ No bookings found.
 </table>
 
 
+
 </div>
 
-
-
-
-
-</main>
 
 
 
@@ -706,11 +681,11 @@ No bookings found.
 
 
 <!-- =========================
-     VIEW BOOKING MODAL
+     CUSTOMER DETAILS MODAL
 ========================= -->
 
 
-<div class="modal" id="bookingModal">
+<div class="modal" id="customerModal">
 
 
 
@@ -720,7 +695,7 @@ No bookings found.
 
 <h2>
 
-Booking Details
+Customer Details
 
 </h2>
 
@@ -728,7 +703,67 @@ Booking Details
 
 
 
-<div class="booking-details">
+<div class="customer-profile">
+
+
+
+<img
+id="customerPhoto"
+src="images/avatar.png">
+
+
+
+
+
+<h3 id="customerName">
+
+Customer Name
+
+</h3>
+
+
+
+<p id="customerPhone">
+
+Phone
+
+</p>
+
+
+
+<p id="customerEmail">
+
+Email
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="customer-info">
+
+
+
+<p>
+
+<strong>
+Customer ID:
+</strong>
+
+<span id="viewCustomerId">
+
+-
+
+</span>
+
+
+</p>
 
 
 
@@ -737,12 +772,15 @@ Booking Details
 <p>
 
 <strong>
-Ticket ID:
+Location:
 </strong>
 
-<span id="ticketId">
+<span id="viewLocation">
+
+-
 
 </span>
+
 
 </p>
 
@@ -754,102 +792,15 @@ Ticket ID:
 <p>
 
 <strong>
-Passenger:
+Total Bookings:
 </strong>
 
-<span id="passengerName">
+<span id="viewBookings">
+
+0
 
 </span>
 
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Phone:
-</strong>
-
-<span id="passengerPhone">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Route:
-</strong>
-
-<span id="bookingRoute">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Travel Date:
-</strong>
-
-<span id="travelDate">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Seat Number:
-</strong>
-
-<span id="seatNumber">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Amount:
-</strong>
-
-<span id="bookingAmount">
-
-</span>
 
 </p>
 
@@ -862,34 +813,17 @@ Amount:
 <p>
 
 <strong>
-Payment Status:
+Status:
 </strong>
 
-<span id="paymentStatus">
+<span id="viewStatus">
+
+-
 
 </span>
 
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Booking Status:
-</strong>
-
-<span id="bookingStatus">
-
-</span>
 
 </p>
-
-
 
 
 
@@ -903,26 +837,26 @@ Booking Status:
 <div class="modal-buttons">
 
 
-<button id="confirmBooking">
 
-Confirm Booking
+<button
+id="closeCustomer">
 
-</button>
-
-
-
-<button id="cancelBooking">
-
-Cancel Booking
-
-</button>
-
-
-
-<button id="closeBooking">
 
 Close
 
+
+</button>
+
+
+
+<button
+id="deleteCustomer"
+class="delete-btn">
+
+
+Delete Customer
+
+
 </button>
 
 
@@ -932,7 +866,6 @@ Close
 
 
 
-
 </div>
 
 
@@ -942,20 +875,9 @@ Close
 
 
 
+<script type="module" src="js/customers.js"></script>
 
-
-
-<!-- =========================
-     SCRIPTS
-========================= -->
-
-
-<script type="module" src="js/bookings.js"></script>
-
-<script src="js/sidebar.js"></script>
-
-
-
+  <script src="js/sidebar.js"></script>
 
 </body>
 

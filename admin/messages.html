@@ -7,9 +7,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Manage Bookings | BusGo Admin</title>
 
-<link rel="stylesheet" href="css/bookings.css">
+<title>Messages | BusGo Admin</title>
+
+
+<link rel="stylesheet" href="css/messages.css">
+
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -20,10 +23,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <body>
 
 
-<!-- =========================
-     SIDEBAR
-========================= -->
-
+<!-- SIDEBAR -->
 
 <aside class="sidebar">
 
@@ -71,7 +71,6 @@ Dashboard
 
 
 
-
 <li>
 
 <a href="buses.html">
@@ -83,7 +82,6 @@ Manage Buses
 </a>
 
 </li>
-
 
 
 
@@ -101,7 +99,6 @@ Manage Routes
 
 
 
-
 <li>
 
 <a href="companies.html">
@@ -113,7 +110,6 @@ Bus Companies
 </a>
 
 </li>
-
 
 
 
@@ -131,7 +127,6 @@ Drivers
 
 
 
-
 <li>
 
 <a href="customers.html">
@@ -146,8 +141,7 @@ Customers
 
 
 
-
-<li class="active">
+<li>
 
 <a href="bookings.html">
 
@@ -158,7 +152,6 @@ Bookings
 </a>
 
 </li>
-
 
 
 
@@ -176,7 +169,6 @@ Payments
 
 
 
-
 <li>
 
 <a href="reports.html">
@@ -191,8 +183,7 @@ Reports
 
 
 
-
-<li>
+<li class="active">
 
 <a href="messages.html">
 
@@ -203,7 +194,6 @@ Messages
 </a>
 
 </li>
-
 
 
 
@@ -235,7 +225,10 @@ Settings
 </li>
 
 
+
 </ul>
+
+
 
 
 
@@ -257,10 +250,8 @@ Logout
 
 
 
-<!-- =========================
-     MAIN CONTENT
-========================= -->
 
+<!-- MAIN -->
 
 <main class="main">
 
@@ -271,16 +262,20 @@ Logout
 
 
 
+
+
 <header class="topbar">
 
- <button class="menu-btn" id="menuBtn">
+  <button class="menu-btn" id="menuBtn">
 
 <i class="fa-solid fa-bars"></i>
 
 </button>
 
 <h2>
-Manage Bookings
+
+Customer Messages
+
 </h2>
 
 
@@ -291,7 +286,7 @@ Manage Bookings
 <i class="fa-solid fa-user-circle"></i>
 
 
-<span id="adminName">
+<span>
 
 Administrator
 
@@ -309,27 +304,27 @@ Administrator
 
 
 
-<!-- =========================
- BOOKING STATISTICS
-========================= -->
+
+
+<!-- MESSAGE CARDS -->
 
 
 <section class="cards">
 
 
-
 <div class="card">
+
 
 <div class="card-icon blue">
 
-<i class="fa-solid fa-ticket"></i>
+<i class="fa-solid fa-envelope"></i>
 
 </div>
 
 
 <div>
 
-<h3 id="totalBookings">
+<h3 id="totalMessages">
 
 0
 
@@ -338,44 +333,7 @@ Administrator
 
 <p>
 
-Total Bookings
-
-</p>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<div class="card-icon green">
-
-<i class="fa-solid fa-circle-check"></i>
-
-</div>
-
-
-<div>
-
-<h3 id="confirmedBookings">
-
-0
-
-</h3>
-
-
-<p>
-
-Confirmed
+Total Messages
 
 </p>
 
@@ -396,15 +354,14 @@ Confirmed
 
 <div class="card-icon orange">
 
-<i class="fa-solid fa-clock"></i>
+<i class="fa-solid fa-envelope-open"></i>
 
 </div>
 
 
 <div>
 
-
-<h3 id="pendingBookings">
+<h3 id="unreadMessages">
 
 0
 
@@ -413,7 +370,44 @@ Confirmed
 
 <p>
 
-Pending
+Unread
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-icon green">
+
+<i class="fa-solid fa-reply"></i>
+
+</div>
+
+
+<div>
+
+<h3 id="repliedMessages">
+
+0
+
+</h3>
+
+
+<p>
+
+Replied
 
 </p>
 
@@ -434,15 +428,14 @@ Pending
 
 <div class="card-icon red">
 
-<i class="fa-solid fa-ban"></i>
+<i class="fa-solid fa-exclamation"></i>
 
 </div>
 
 
 <div>
 
-
-<h3 id="cancelledBookings">
+<h3 id="urgentMessages">
 
 0
 
@@ -451,7 +444,7 @@ Pending
 
 <p>
 
-Cancelled
+Urgent
 
 </p>
 
@@ -464,91 +457,25 @@ Cancelled
 
 
 </section>
-
-
-
-
-
-
-<!-- =========================
- TOOLBAR
+  
+  <!-- =========================
+ MESSAGE TOOLBAR
 ========================= -->
 
 
 <section class="toolbar">
 
 
-
 <input
-
 type="text"
-
-id="searchBooking"
-
-placeholder="Search passenger, route or ticket..."
-
->
+id="searchMessage"
+placeholder="Search customer message...">
 
 
 
 
 
-<select id="filterRoute">
-
-
-<option value="">
-
-All Routes
-
-</option>
-
-
-</select>
-
-
-
-
-
-
-<select id="filterPayment">
-
-
-<option value="">
-
-All Payments
-
-</option>
-
-
-<option value="Paid">
-
-Paid
-
-</option>
-
-
-<option value="Pending">
-
-Pending
-
-</option>
-
-
-<option value="Failed">
-
-Failed
-
-</option>
-
-
-</select>
-
-
-
-
-
-
-<select id="filterStatus">
+<select id="filterMessageStatus">
 
 
 <option value="">
@@ -559,25 +486,58 @@ All Status
 
 
 
-<option value="Confirmed">
+<option value="Unread">
 
-Confirmed
-
-</option>
-
-
-
-<option value="Pending">
-
-Pending
+Unread
 
 </option>
 
 
 
-<option value="Cancelled">
+<option value="Read">
 
-Cancelled
+Read
+
+</option>
+
+
+
+<option value="Replied">
+
+Replied
+
+</option>
+
+
+</select>
+
+
+
+
+
+
+<select id="filterPriority">
+
+
+<option value="">
+
+All Priority
+
+</option>
+
+
+
+<option value="Normal">
+
+Normal
+
+</option>
+
+
+
+<option value="Urgent">
+
+Urgent
 
 </option>
 
@@ -588,9 +548,17 @@ Cancelled
 
 
 </section>
-  
+
+
+
+
+
+
+
+
+
 <!-- =========================
-     BOOKINGS TABLE
+ MESSAGES TABLE
 ========================= -->
 
 
@@ -607,53 +575,59 @@ Cancelled
 
 
 <th>
-Ticket ID
+
+Customer
+
 </th>
 
 
+
 <th>
-Passenger
+
+Email
+
 </th>
 
 
+
 <th>
-Phone
+
+Subject
+
 </th>
 
 
+
 <th>
-Route
+
+Message
+
 </th>
 
 
+
 <th>
-Travel Date
+
+Date
+
 </th>
 
 
-<th>
-Seat
-</th>
-
 
 <th>
-Amount
-</th>
 
-
-<th>
-Payment
-</th>
-
-
-<th>
 Status
+
 </th>
+
 
 
 <th>
+
 Actions
+
 </th>
+
 
 
 </tr>
@@ -664,24 +638,22 @@ Actions
 
 
 
-
-<tbody id="bookingTable">
+<tbody id="messageTable">
 
 
 <tr>
 
 
-<td colspan="10" class="empty-message">
+<td colspan="7" class="empty-message">
 
 
-No bookings found.
+No messages found.
 
 
 </td>
 
 
 </tr>
-
 
 
 </tbody>
@@ -697,30 +669,24 @@ No bookings found.
 
 
 
-</main>
-
-
-
 
 
 
 
 <!-- =========================
-     VIEW BOOKING MODAL
+ VIEW MESSAGE MODAL
 ========================= -->
 
 
-<div class="modal" id="bookingModal">
-
+<div class="modal" id="messageModal">
 
 
 <div class="modal-content">
 
 
-
 <h2>
 
-Booking Details
+Message Details
 
 </h2>
 
@@ -728,7 +694,31 @@ Booking Details
 
 
 
-<div class="booking-details">
+<div class="message-details">
+
+
+<p>
+
+<strong>
+Customer:
+</strong>
+
+<span id="viewCustomer"></span>
+
+</p>
+
+
+
+
+<p>
+
+<strong>
+Email:
+</strong>
+
+<span id="viewEmail"></span>
+
+</p>
 
 
 
@@ -737,15 +727,12 @@ Booking Details
 <p>
 
 <strong>
-Ticket ID:
+Subject:
 </strong>
 
-<span id="ticketId">
-
-</span>
+<span id="viewSubject"></span>
 
 </p>
-
 
 
 
@@ -754,142 +741,12 @@ Ticket ID:
 <p>
 
 <strong>
-Passenger:
+Message:
 </strong>
 
-<span id="passengerName">
-
-</span>
+<span id="viewMessage"></span>
 
 </p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Phone:
-</strong>
-
-<span id="passengerPhone">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Route:
-</strong>
-
-<span id="bookingRoute">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Travel Date:
-</strong>
-
-<span id="travelDate">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Seat Number:
-</strong>
-
-<span id="seatNumber">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Amount:
-</strong>
-
-<span id="bookingAmount">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Payment Status:
-</strong>
-
-<span id="paymentStatus">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Booking Status:
-</strong>
-
-<span id="bookingStatus">
-
-</span>
-
-</p>
-
-
 
 
 
@@ -900,26 +757,59 @@ Booking Status:
 
 
 
+
+
+
+<h3>
+
+Reply Customer
+
+</h3>
+
+
+
+
+
+<textarea
+id="replyMessage"
+placeholder="Write reply..."></textarea>
+
+
+
+
+
+
 <div class="modal-buttons">
 
 
-<button id="confirmBooking">
 
-Confirm Booking
+<button id="sendReply">
 
-</button>
+<i class="fa-solid fa-paper-plane"></i>
 
-
-
-<button id="cancelBooking">
-
-Cancel Booking
+Send Reply
 
 </button>
 
 
 
-<button id="closeBooking">
+
+
+
+<button id="deleteMessage">
+
+<i class="fa-solid fa-trash"></i>
+
+Delete
+
+</button>
+
+
+
+
+
+
+<button id="closeMessage">
 
 Close
 
@@ -932,7 +822,6 @@ Close
 
 
 
-
 </div>
 
 
@@ -944,16 +833,9 @@ Close
 
 
 
-
-<!-- =========================
-     SCRIPTS
-========================= -->
-
-
-<script type="module" src="js/bookings.js"></script>
+<script type="module" src="js/messages.js"></script>
 
 <script src="js/sidebar.js"></script>
-
 
 
 

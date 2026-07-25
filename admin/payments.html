@@ -7,17 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Manage Bookings | BusGo Admin</title>
+<title>Manage Payments | BusGo Admin</title>
 
-<link rel="stylesheet" href="css/bookings.css">
+
+<link rel="stylesheet" href="css/payments.css">
+
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 </head>
 
 
 <body>
+
+
 
 
 <!-- =========================
@@ -49,6 +54,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 
 </div>
+
 
 
 
@@ -147,7 +153,7 @@ Customers
 
 
 
-<li class="active">
+<li>
 
 <a href="bookings.html">
 
@@ -162,7 +168,7 @@ Bookings
 
 
 
-<li>
+<li class="active">
 
 <a href="payments.html">
 
@@ -241,16 +247,22 @@ Settings
 
 
 
+
 <button id="logoutBtn">
+
 
 <i class="fa-solid fa-right-from-bracket"></i>
 
+
 Logout
+
 
 </button>
 
 
+
 </aside>
+
 
 
 
@@ -271,17 +283,22 @@ Logout
 
 
 
+
 <header class="topbar">
 
- <button class="menu-btn" id="menuBtn">
+
+<button class="menu-btn" id="menuBtn">
 
 <i class="fa-solid fa-bars"></i>
 
 </button>
-
+  
 <h2>
-Manage Bookings
+
+Manage Payments
+
 </h2>
+
 
 
 
@@ -309,8 +326,9 @@ Administrator
 
 
 
+
 <!-- =========================
- BOOKING STATISTICS
+ PAYMENT STATISTICS
 ========================= -->
 
 
@@ -320,25 +338,26 @@ Administrator
 
 <div class="card">
 
+
 <div class="card-icon blue">
 
-<i class="fa-solid fa-ticket"></i>
+<i class="fa-solid fa-money-bill"></i>
 
 </div>
 
 
 <div>
 
-<h3 id="totalBookings">
+<h3 id="totalRevenue">
 
-0
+UGX 0
 
 </h3>
 
 
 <p>
 
-Total Bookings
+Total Revenue
 
 </p>
 
@@ -366,7 +385,7 @@ Total Bookings
 
 <div>
 
-<h3 id="confirmedBookings">
+<h3 id="paidPayments">
 
 0
 
@@ -375,7 +394,7 @@ Total Bookings
 
 <p>
 
-Confirmed
+Paid Payments
 
 </p>
 
@@ -403,8 +422,7 @@ Confirmed
 
 <div>
 
-
-<h3 id="pendingBookings">
+<h3 id="pendingPayments">
 
 0
 
@@ -434,15 +452,14 @@ Pending
 
 <div class="card-icon red">
 
-<i class="fa-solid fa-ban"></i>
+<i class="fa-solid fa-circle-xmark"></i>
 
 </div>
 
 
 <div>
 
-
-<h3 id="cancelledBookings">
+<h3 id="failedPayments">
 
 0
 
@@ -451,7 +468,7 @@ Pending
 
 <p>
 
-Cancelled
+Failed
 
 </p>
 
@@ -463,15 +480,13 @@ Cancelled
 
 
 
+
+
+
 </section>
-
-
-
-
-
-
+  
 <!-- =========================
- TOOLBAR
+     TOOLBAR
 ========================= -->
 
 
@@ -483,22 +498,44 @@ Cancelled
 
 type="text"
 
-id="searchBooking"
+id="searchPayment"
 
-placeholder="Search passenger, route or ticket..."
-
->
+placeholder="Search customer, transaction...">
 
 
 
 
 
-<select id="filterRoute">
+<select id="filterMethod">
 
 
 <option value="">
 
-All Routes
+All Payment Methods
+
+</option>
+
+
+
+<option value="Mobile Money">
+
+Mobile Money
+
+</option>
+
+
+
+<option value="Card">
+
+Card
+
+</option>
+
+
+
+<option value="Cash">
+
+Cash
 
 </option>
 
@@ -510,45 +547,8 @@ All Routes
 
 
 
-<select id="filterPayment">
 
-
-<option value="">
-
-All Payments
-
-</option>
-
-
-<option value="Paid">
-
-Paid
-
-</option>
-
-
-<option value="Pending">
-
-Pending
-
-</option>
-
-
-<option value="Failed">
-
-Failed
-
-</option>
-
-
-</select>
-
-
-
-
-
-
-<select id="filterStatus">
+<select id="filterPaymentStatus">
 
 
 <option value="">
@@ -559,9 +559,9 @@ All Status
 
 
 
-<option value="Confirmed">
+<option value="Paid">
 
-Confirmed
+Paid
 
 </option>
 
@@ -575,9 +575,9 @@ Pending
 
 
 
-<option value="Cancelled">
+<option value="Failed">
 
-Cancelled
+Failed
 
 </option>
 
@@ -588,75 +588,93 @@ Cancelled
 
 
 </section>
-  
+
+
+
+
+
+
+
+
 <!-- =========================
-     BOOKINGS TABLE
+     PAYMENTS TABLE
 ========================= -->
 
 
 <div class="table-container">
 
 
+
 <table>
 
 
+
 <thead>
+
 
 
 <tr>
 
 
 <th>
-Ticket ID
+
+Transaction ID
+
 </th>
 
 
 <th>
-Passenger
+
+Customer
+
 </th>
 
 
 <th>
-Phone
+
+Booking ID
+
 </th>
 
 
 <th>
-Route
-</th>
 
-
-<th>
-Travel Date
-</th>
-
-
-<th>
-Seat
-</th>
-
-
-<th>
 Amount
+
 </th>
 
 
 <th>
-Payment
+
+Method
+
 </th>
 
 
 <th>
+
+Date
+
+</th>
+
+
+<th>
+
 Status
+
 </th>
 
 
 <th>
+
 Actions
+
 </th>
+
 
 
 </tr>
+
 
 
 </thead>
@@ -665,16 +683,17 @@ Actions
 
 
 
-<tbody id="bookingTable">
+
+<tbody id="paymentTable">
 
 
 <tr>
 
 
-<td colspan="10" class="empty-message">
+<td colspan="8" class="empty-message">
 
 
-No bookings found.
+No payments found.
 
 
 </td>
@@ -683,15 +702,18 @@ No bookings found.
 </tr>
 
 
-
 </tbody>
+
+
 
 
 
 </table>
 
 
+
 </div>
+
 
 
 
@@ -706,11 +728,11 @@ No bookings found.
 
 
 <!-- =========================
-     VIEW BOOKING MODAL
+     PAYMENT DETAILS MODAL
 ========================= -->
 
 
-<div class="modal" id="bookingModal">
+<div class="modal" id="paymentModal">
 
 
 
@@ -720,7 +742,7 @@ No bookings found.
 
 <h2>
 
-Booking Details
+Payment Details
 
 </h2>
 
@@ -728,7 +750,19 @@ Booking Details
 
 
 
-<div class="booking-details">
+<div class="payment-details">
+
+
+
+<p>
+
+<strong>
+Transaction ID:
+</strong>
+
+<span id="transactionId"></span>
+
+</p>
 
 
 
@@ -737,12 +771,10 @@ Booking Details
 <p>
 
 <strong>
-Ticket ID:
+Customer:
 </strong>
 
-<span id="ticketId">
-
-</span>
+<span id="customerName"></span>
 
 </p>
 
@@ -754,87 +786,12 @@ Ticket ID:
 <p>
 
 <strong>
-Passenger:
+Booking ID:
 </strong>
 
-<span id="passengerName">
-
-</span>
+<span id="bookingId"></span>
 
 </p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Phone:
-</strong>
-
-<span id="passengerPhone">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Route:
-</strong>
-
-<span id="bookingRoute">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Travel Date:
-</strong>
-
-<span id="travelDate">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Seat Number:
-</strong>
-
-<span id="seatNumber">
-
-</span>
-
-</p>
-
 
 
 
@@ -847,12 +804,9 @@ Seat Number:
 Amount:
 </strong>
 
-<span id="bookingAmount">
-
-</span>
+<span id="paymentAmount"></span>
 
 </p>
-
 
 
 
@@ -862,15 +816,12 @@ Amount:
 <p>
 
 <strong>
-Payment Status:
+Payment Method:
 </strong>
 
-<span id="paymentStatus">
-
-</span>
+<span id="paymentMethod"></span>
 
 </p>
-
 
 
 
@@ -880,15 +831,27 @@ Payment Status:
 <p>
 
 <strong>
-Booking Status:
+Payment Date:
 </strong>
 
-<span id="bookingStatus">
-
-</span>
+<span id="paymentDate"></span>
 
 </p>
 
+
+
+
+
+
+<p>
+
+<strong>
+Status:
+</strong>
+
+<span id="paymentStatus"></span>
+
+</p>
 
 
 
@@ -900,26 +863,28 @@ Booking Status:
 
 
 
+
 <div class="modal-buttons">
 
 
-<button id="confirmBooking">
 
-Confirm Booking
+<button id="markPaid">
 
-</button>
-
-
-
-<button id="cancelBooking">
-
-Cancel Booking
+Mark Paid
 
 </button>
 
 
 
-<button id="closeBooking">
+<button id="markFailed">
+
+Mark Failed
+
+</button>
+
+
+
+<button id="closePayment">
 
 Close
 
@@ -933,11 +898,12 @@ Close
 
 
 
-</div>
-
 
 </div>
 
+
+
+</div>
 
 
 
@@ -950,7 +916,8 @@ Close
 ========================= -->
 
 
-<script type="module" src="js/bookings.js"></script>
+<script type="module" src="js/payments.js"></script>
+
 
 <script src="js/sidebar.js"></script>
 

@@ -7,12 +7,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Manage Bookings | BusGo Admin</title>
 
-<link rel="stylesheet" href="css/bookings.css">
+<title>Reports | BusGo Admin</title>
+
+
+<link rel="stylesheet" href="css/reports.css">
+
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 </head>
 
@@ -20,8 +24,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <body>
 
 
+
 <!-- =========================
-     SIDEBAR
+ SIDEBAR
 ========================= -->
 
 
@@ -38,7 +43,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <h2>BusGo</h2>
 
 </div>
-
 
 
 <button id="closeMenu">
@@ -147,7 +151,7 @@ Customers
 
 
 
-<li class="active">
+<li>
 
 <a href="bookings.html">
 
@@ -177,7 +181,7 @@ Payments
 
 
 
-<li>
+<li class="active">
 
 <a href="reports.html">
 
@@ -188,7 +192,6 @@ Reports
 </a>
 
 </li>
-
 
 
 
@@ -241,13 +244,18 @@ Settings
 
 
 
+
 <button id="logoutBtn">
+
 
 <i class="fa-solid fa-right-from-bracket"></i>
 
+
 Logout
 
+
 </button>
+
 
 
 </aside>
@@ -257,8 +265,10 @@ Logout
 
 
 
+
+
 <!-- =========================
-     MAIN CONTENT
+ MAIN
 ========================= -->
 
 
@@ -271,16 +281,19 @@ Logout
 
 
 
+
 <header class="topbar">
 
- <button class="menu-btn" id="menuBtn">
+<button class="menu-btn" id="menuBtn">
 
 <i class="fa-solid fa-bars"></i>
 
 </button>
-
+ 
 <h2>
-Manage Bookings
+
+Reports & Analytics
+
 </h2>
 
 
@@ -291,7 +304,7 @@ Manage Bookings
 <i class="fa-solid fa-user-circle"></i>
 
 
-<span id="adminName">
+<span>
 
 Administrator
 
@@ -308,17 +321,16 @@ Administrator
 
 
 
-
 <!-- =========================
- BOOKING STATISTICS
+ REPORT CARDS
 ========================= -->
 
 
 <section class="cards">
 
 
-
 <div class="card">
+
 
 <div class="card-icon blue">
 
@@ -329,7 +341,7 @@ Administrator
 
 <div>
 
-<h3 id="totalBookings">
+<h3 id="totalTrips">
 
 0
 
@@ -353,29 +365,28 @@ Total Bookings
 
 
 
-
 <div class="card">
 
 
 <div class="card-icon green">
 
-<i class="fa-solid fa-circle-check"></i>
+<i class="fa-solid fa-money-bill"></i>
 
 </div>
 
 
 <div>
 
-<h3 id="confirmedBookings">
+<h3 id="totalRevenue">
 
-0
+UGX 0
 
 </h3>
 
 
 <p>
 
-Confirmed
+Total Revenue
 
 </p>
 
@@ -384,7 +395,6 @@ Confirmed
 
 
 </div>
-
 
 
 
@@ -396,15 +406,14 @@ Confirmed
 
 <div class="card-icon orange">
 
-<i class="fa-solid fa-clock"></i>
+<i class="fa-solid fa-route"></i>
 
 </div>
 
 
 <div>
 
-
-<h3 id="pendingBookings">
+<h3 id="totalRoutes">
 
 0
 
@@ -413,7 +422,7 @@ Confirmed
 
 <p>
 
-Pending
+Active Routes
 
 </p>
 
@@ -422,7 +431,6 @@ Pending
 
 
 </div>
-
 
 
 
@@ -434,15 +442,14 @@ Pending
 
 <div class="card-icon red">
 
-<i class="fa-solid fa-ban"></i>
+<i class="fa-solid fa-bus"></i>
 
 </div>
 
 
 <div>
 
-
-<h3 id="cancelledBookings">
+<h3 id="totalBuses">
 
 0
 
@@ -451,7 +458,7 @@ Pending
 
 <p>
 
-Cancelled
+Total Buses
 
 </p>
 
@@ -464,134 +471,101 @@ Cancelled
 
 
 </section>
-
-
-
-
-
-
-<!-- =========================
- TOOLBAR
+ <!-- =========================
+ REPORT TOOLBAR
 ========================= -->
 
 
-<section class="toolbar">
+<section class="report-toolbar">
 
 
+<div class="date-filter">
 
-<input
 
-type="text"
+<label>
 
-id="searchBooking"
+From
 
-placeholder="Search passenger, route or ticket..."
+</label>
 
->
 
+<input 
+type="date"
+id="fromDate">
 
 
 
 
-<select id="filterRoute">
 
+<label>
 
-<option value="">
+To
 
-All Routes
+</label>
 
-</option>
 
+<input 
+type="date"
+id="toDate">
 
-</select>
 
 
 
 
+<button id="filterReport">
 
 
-<select id="filterPayment">
+<i class="fa-solid fa-filter"></i>
 
+Generate Report
 
-<option value="">
 
-All Payments
+</button>
 
-</option>
 
+</div>
 
-<option value="Paid">
 
-Paid
 
-</option>
 
 
-<option value="Pending">
 
-Pending
+<button id="exportReport">
 
-</option>
 
+<i class="fa-solid fa-file-export"></i>
 
-<option value="Failed">
+Export Report
 
-Failed
 
-</option>
-
-
-</select>
-
-
-
-
-
-
-<select id="filterStatus">
-
-
-<option value="">
-
-All Status
-
-</option>
-
-
-
-<option value="Confirmed">
-
-Confirmed
-
-</option>
-
-
-
-<option value="Pending">
-
-Pending
-
-</option>
-
-
-
-<option value="Cancelled">
-
-Cancelled
-
-</option>
-
-
-
-</select>
+</button>
 
 
 
 </section>
-  
+
+
+
+
+
+
+
+
 <!-- =========================
-     BOOKINGS TABLE
+ REVENUE REPORT
 ========================= -->
+
+
+<section class="report-section">
+
+
+<h2>
+
+Revenue Report
+
+</h2>
+
+
 
 
 <div class="table-container">
@@ -607,52 +581,30 @@ Cancelled
 
 
 <th>
-Ticket ID
+
+Date
+
 </th>
 
 
 <th>
-Passenger
+
+Bookings
+
 </th>
 
 
 <th>
-Phone
+
+Revenue
+
 </th>
 
 
 <th>
-Route
-</th>
 
-
-<th>
-Travel Date
-</th>
-
-
-<th>
-Seat
-</th>
-
-
-<th>
-Amount
-</th>
-
-
-<th>
-Payment
-</th>
-
-
-<th>
 Status
-</th>
 
-
-<th>
-Actions
 </th>
 
 
@@ -664,24 +616,20 @@ Actions
 
 
 
-
-<tbody id="bookingTable">
+<tbody id="revenueTable">
 
 
 <tr>
 
 
-<td colspan="10" class="empty-message">
+<td colspan="4">
 
-
-No bookings found.
-
+No data available
 
 </td>
 
 
 </tr>
-
 
 
 </tbody>
@@ -691,7 +639,219 @@ No bookings found.
 </table>
 
 
+
 </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+ POPULAR ROUTES
+========================= -->
+
+
+<section class="report-section">
+
+
+<h2>
+
+Popular Routes
+
+</h2>
+
+
+
+
+
+<div class="table-container">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+
+Route
+
+</th>
+
+
+<th>
+
+Bookings
+
+</th>
+
+
+<th>
+
+Passengers
+
+</th>
+
+
+<th>
+
+Revenue
+
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody id="routeReportTable">
+
+
+<tr>
+
+
+<td colspan="4">
+
+No data available
+
+</td>
+
+
+</tr>
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+ BUS PERFORMANCE
+========================= -->
+
+
+<section class="report-section">
+
+
+<h2>
+
+Bus Performance
+
+</h2>
+
+
+
+
+
+<div class="table-container">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+
+Bus
+
+</th>
+
+
+<th>
+
+Trips
+
+</th>
+
+
+<th>
+
+Passengers
+
+</th>
+
+
+<th>
+
+Revenue
+
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+<tbody id="busReportTable">
+
+
+<tr>
+
+
+<td colspan="4">
+
+No data available
+
+</td>
+
+
+</tr>
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</div>
+
+
+
+</section>
+
 
 
 
@@ -705,255 +865,10 @@ No bookings found.
 
 
 
-<!-- =========================
-     VIEW BOOKING MODAL
-========================= -->
+<script type="module" src="js/reports.js"></script>
 
-
-<div class="modal" id="bookingModal">
-
-
-
-<div class="modal-content">
-
-
-
-<h2>
-
-Booking Details
-
-</h2>
-
-
-
-
-
-<div class="booking-details">
-
-
-
-
-
-<p>
-
-<strong>
-Ticket ID:
-</strong>
-
-<span id="ticketId">
-
-</span>
-
-</p>
-
-
-
-
-
-
-<p>
-
-<strong>
-Passenger:
-</strong>
-
-<span id="passengerName">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Phone:
-</strong>
-
-<span id="passengerPhone">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Route:
-</strong>
-
-<span id="bookingRoute">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Travel Date:
-</strong>
-
-<span id="travelDate">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Seat Number:
-</strong>
-
-<span id="seatNumber">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Amount:
-</strong>
-
-<span id="bookingAmount">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Payment Status:
-</strong>
-
-<span id="paymentStatus">
-
-</span>
-
-</p>
-
-
-
-
-
-
-
-<p>
-
-<strong>
-Booking Status:
-</strong>
-
-<span id="bookingStatus">
-
-</span>
-
-</p>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-<div class="modal-buttons">
-
-
-<button id="confirmBooking">
-
-Confirm Booking
-
-</button>
-
-
-
-<button id="cancelBooking">
-
-Cancel Booking
-
-</button>
-
-
-
-<button id="closeBooking">
-
-Close
-
-</button>
-
-
-
-</div>
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-<!-- =========================
-     SCRIPTS
-========================= -->
-
-
-<script type="module" src="js/bookings.js"></script>
 
 <script src="js/sidebar.js"></script>
-
 
 
 

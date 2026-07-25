@@ -7,12 +7,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Manage Bookings | BusGo Admin</title>
 
-<link rel="stylesheet" href="css/bookings.css">
+<title>Notifications | BusGo Admin</title>
+
+
+<link rel="stylesheet" href="css/notifications.css">
+
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 </head>
 
@@ -20,8 +24,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <body>
 
 
+
 <!-- =========================
-     SIDEBAR
+ SIDEBAR
 ========================= -->
 
 
@@ -54,6 +59,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 
 
+
 <ul>
 
 
@@ -71,7 +77,6 @@ Dashboard
 
 
 
-
 <li>
 
 <a href="buses.html">
@@ -83,7 +88,6 @@ Manage Buses
 </a>
 
 </li>
-
 
 
 
@@ -101,7 +105,6 @@ Manage Routes
 
 
 
-
 <li>
 
 <a href="companies.html">
@@ -113,7 +116,6 @@ Bus Companies
 </a>
 
 </li>
-
 
 
 
@@ -131,7 +133,6 @@ Drivers
 
 
 
-
 <li>
 
 <a href="customers.html">
@@ -146,8 +147,7 @@ Customers
 
 
 
-
-<li class="active">
+<li>
 
 <a href="bookings.html">
 
@@ -158,7 +158,6 @@ Bookings
 </a>
 
 </li>
-
 
 
 
@@ -173,7 +172,6 @@ Payments
 </a>
 
 </li>
-
 
 
 
@@ -207,7 +205,7 @@ Messages
 
 
 
-<li>
+<li class="active">
 
 <a href="notifications.html">
 
@@ -241,6 +239,8 @@ Settings
 
 
 
+
+
 <button id="logoutBtn">
 
 <i class="fa-solid fa-right-from-bracket"></i>
@@ -250,6 +250,7 @@ Logout
 </button>
 
 
+
 </aside>
 
 
@@ -257,8 +258,9 @@ Logout
 
 
 
+
 <!-- =========================
-     MAIN CONTENT
+ MAIN CONTENT
 ========================= -->
 
 
@@ -273,15 +275,19 @@ Logout
 
 <header class="topbar">
 
- <button class="menu-btn" id="menuBtn">
+<button class="menu-btn" id="menuBtn">
 
 <i class="fa-solid fa-bars"></i>
 
 </button>
 
+  
 <h2>
-Manage Bookings
+
+Notifications
+
 </h2>
+
 
 
 
@@ -291,7 +297,7 @@ Manage Bookings
 <i class="fa-solid fa-user-circle"></i>
 
 
-<span id="adminName">
+<span>
 
 Administrator
 
@@ -309,8 +315,9 @@ Administrator
 
 
 
+
 <!-- =========================
- BOOKING STATISTICS
+ NOTIFICATION CARDS
 ========================= -->
 
 
@@ -320,16 +327,17 @@ Administrator
 
 <div class="card">
 
+
 <div class="card-icon blue">
 
-<i class="fa-solid fa-ticket"></i>
+<i class="fa-solid fa-bell"></i>
 
 </div>
 
 
 <div>
 
-<h3 id="totalBookings">
+<h3 id="totalNotifications">
 
 0
 
@@ -338,7 +346,7 @@ Administrator
 
 <p>
 
-Total Bookings
+Total Notifications
 
 </p>
 
@@ -353,20 +361,19 @@ Total Bookings
 
 
 
-
 <div class="card">
 
 
 <div class="card-icon green">
 
-<i class="fa-solid fa-circle-check"></i>
+<i class="fa-solid fa-envelope-open"></i>
 
 </div>
 
 
 <div>
 
-<h3 id="confirmedBookings">
+<h3 id="readNotifications">
 
 0
 
@@ -375,7 +382,7 @@ Total Bookings
 
 <p>
 
-Confirmed
+Read
 
 </p>
 
@@ -396,15 +403,14 @@ Confirmed
 
 <div class="card-icon orange">
 
-<i class="fa-solid fa-clock"></i>
+<i class="fa-solid fa-envelope"></i>
 
 </div>
 
 
 <div>
 
-
-<h3 id="pendingBookings">
+<h3 id="unreadNotifications">
 
 0
 
@@ -413,7 +419,7 @@ Confirmed
 
 <p>
 
-Pending
+Unread
 
 </p>
 
@@ -434,15 +440,14 @@ Pending
 
 <div class="card-icon red">
 
-<i class="fa-solid fa-ban"></i>
+<i class="fa-solid fa-triangle-exclamation"></i>
 
 </div>
 
 
 <div>
 
-
-<h3 id="cancelledBookings">
+<h3 id="importantNotifications">
 
 0
 
@@ -451,7 +456,7 @@ Pending
 
 <p>
 
-Cancelled
+Important
 
 </p>
 
@@ -463,80 +468,55 @@ Cancelled
 
 
 
+
+
 </section>
-
-
-
-
-
-
-<!-- =========================
- TOOLBAR
+  <!-- =========================
+ NOTIFICATION TOOLBAR
 ========================= -->
 
 
 <section class="toolbar">
 
 
-
-<input
-
+<input 
 type="text"
-
-id="searchBooking"
-
-placeholder="Search passenger, route or ticket..."
-
->
+id="searchNotification"
+placeholder="Search notification...">
 
 
 
 
 
-<select id="filterRoute">
+<select id="filterType">
 
 
 <option value="">
 
-All Routes
+All Types
 
 </option>
 
 
-</select>
+<option value="Booking">
 
-
-
-
-
-
-<select id="filterPayment">
-
-
-<option value="">
-
-All Payments
+Booking
 
 </option>
 
 
-<option value="Paid">
 
-Paid
+<option value="Payment">
 
-</option>
-
-
-<option value="Pending">
-
-Pending
+Payment
 
 </option>
 
 
-<option value="Failed">
 
-Failed
+<option value="System">
+
+System
 
 </option>
 
@@ -559,38 +539,52 @@ All Status
 
 
 
-<option value="Confirmed">
+<option value="Read">
 
-Confirmed
-
-</option>
-
-
-
-<option value="Pending">
-
-Pending
+Read
 
 </option>
 
 
 
-<option value="Cancelled">
+<option value="Unread">
 
-Cancelled
+Unread
 
 </option>
-
 
 
 </select>
 
 
 
+
+
+
+<button id="addNotificationBtn">
+
+
+<i class="fa-solid fa-plus"></i>
+
+
+Send Notification
+
+
+</button>
+
+
 </section>
-  
+
+
+
+
+
+
+
+
+
 <!-- =========================
-     BOOKINGS TABLE
+ NOTIFICATIONS TABLE
 ========================= -->
 
 
@@ -607,52 +601,57 @@ Cancelled
 
 
 <th>
-Ticket ID
+
+Icon
+
 </th>
 
 
+
 <th>
-Passenger
+
+Title
+
 </th>
 
 
+
 <th>
-Phone
+
+Message
+
 </th>
 
 
+
 <th>
-Route
+
+Type
+
 </th>
 
 
+
 <th>
-Travel Date
+
+Date
+
 </th>
 
 
-<th>
-Seat
-</th>
-
 
 <th>
-Amount
-</th>
 
-
-<th>
-Payment
-</th>
-
-
-<th>
 Status
+
 </th>
 
 
+
 <th>
+
 Actions
+
 </th>
 
 
@@ -665,16 +664,16 @@ Actions
 
 
 
-<tbody id="bookingTable">
+<tbody id="notificationTable">
 
 
 <tr>
 
 
-<td colspan="10" class="empty-message">
+<td colspan="7" class="empty-message">
 
 
-No bookings found.
+No notifications found.
 
 
 </td>
@@ -697,20 +696,16 @@ No bookings found.
 
 
 
-</main>
-
-
-
 
 
 
 
 <!-- =========================
-     VIEW BOOKING MODAL
+ ADD NOTIFICATION MODAL
 ========================= -->
 
 
-<div class="modal" id="bookingModal">
+<div class="modal" id="notificationModal">
 
 
 
@@ -720,7 +715,7 @@ No bookings found.
 
 <h2>
 
-Booking Details
+Send Notification
 
 </h2>
 
@@ -728,172 +723,135 @@ Booking Details
 
 
 
-<div class="booking-details">
+<form id="notificationForm">
 
 
 
 
 
-<p>
 
-<strong>
-Ticket ID:
-</strong>
+<label>
 
-<span id="ticketId">
+Title
 
-</span>
+</label>
 
-</p>
 
 
+<input
 
+type="text"
 
+id="notificationTitle"
 
+placeholder="Notification title"
 
-<p>
+required>
 
-<strong>
-Passenger:
-</strong>
 
-<span id="passengerName">
 
-</span>
 
-</p>
 
 
 
 
+<label>
 
+Message
 
+</label>
 
-<p>
 
-<strong>
-Phone:
-</strong>
 
-<span id="passengerPhone">
+<textarea
 
-</span>
+id="notificationMessage"
 
-</p>
+placeholder="Write notification..."
 
+required></textarea>
 
 
 
 
 
 
-<p>
 
-<strong>
-Route:
-</strong>
 
-<span id="bookingRoute">
+<label>
 
-</span>
+Type
 
-</p>
+</label>
 
 
 
+<select id="notificationType">
 
 
+<option>
 
+Booking
 
-<p>
+</option>
 
-<strong>
-Travel Date:
-</strong>
 
-<span id="travelDate">
 
-</span>
+<option>
 
-</p>
+Payment
 
+</option>
 
 
 
+<option>
 
+System
 
+</option>
 
-<p>
 
-<strong>
-Seat Number:
-</strong>
 
-<span id="seatNumber">
+</select>
 
-</span>
 
-</p>
 
 
 
 
 
 
+<label>
 
-<p>
+Priority
 
-<strong>
-Amount:
-</strong>
+</label>
 
-<span id="bookingAmount">
 
-</span>
 
-</p>
+<select id="notificationPriority">
 
 
+<option>
 
+Normal
 
+</option>
 
 
 
-<p>
+<option>
 
-<strong>
-Payment Status:
-</strong>
+Important
 
-<span id="paymentStatus">
+</option>
 
-</span>
 
-</p>
 
+</select>
 
 
-
-
-
-
-<p>
-
-<strong>
-Booking Status:
-</strong>
-
-<span id="bookingStatus">
-
-</span>
-
-</p>
-
-
-
-
-
-</div>
 
 
 
@@ -903,25 +861,22 @@ Booking Status:
 <div class="modal-buttons">
 
 
-<button id="confirmBooking">
 
-Confirm Booking
+<button type="submit">
 
-</button>
-
-
-
-<button id="cancelBooking">
-
-Cancel Booking
+Send
 
 </button>
 
 
 
-<button id="closeBooking">
 
-Close
+
+<button 
+type="button"
+id="cancelNotification">
+
+Cancel
 
 </button>
 
@@ -933,27 +888,25 @@ Close
 
 
 
-</div>
+</form>
 
 
 </div>
 
 
 
+</div>
 
 
 
 
 
-<!-- =========================
-     SCRIPTS
-========================= -->
 
 
-<script type="module" src="js/bookings.js"></script>
+<script type="module" src="js/notifications.js"></script>
+
 
 <script src="js/sidebar.js"></script>
-
 
 
 

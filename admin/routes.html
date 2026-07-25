@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manage Routes | BusGo Admin</title>
+
+<link rel="stylesheet" href="css/routes.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="sidebar-header">
+
+<div class="logo">
+
+<i class="fa-solid fa-bus"></i>
+
+<h2>BusGo</h2>
+
+</div>
+
+
+<button id="closeMenu">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+</div>
+
+
+
+<ul>
+
+
+<li>
+<a href="dashboard.html">
+<i class="fa-solid fa-chart-line"></i>
+Dashboard
+</a>
+</li>
+
+
+<li>
+<a href="buses.html">
+<i class="fa-solid fa-bus"></i>
+Manage Buses
+</a>
+</li>
+
+
+<li class="active">
+<a href="routes.html">
+<i class="fa-solid fa-route"></i>
+Manage Routes
+</a>
+</li>
+
+
+<li>
+<a href="companies.html">
+<i class="fa-solid fa-building"></i>
+Companies
+</a>
+</li>
+
+
+<li>
+<a href="drivers.html">
+<i class="fa-solid fa-user-tie"></i>
+Drivers
+</a>
+</li>
+
+
+<li>
+<a href="customers.html">
+<i class="fa-solid fa-users"></i>
+Customers
+</a>
+</li>
+
+
+<li>
+<a href="bookings.html">
+<i class="fa-solid fa-ticket"></i>
+Bookings
+</a>
+</li>
+
+
+<li>
+<a href="payments.html">
+<i class="fa-solid fa-money-bill"></i>
+Payments
+</a>
+</li>
+
+
+<li>
+<a href="reports.html">
+<i class="fa-solid fa-chart-column"></i>
+Reports
+</a>
+</li>
+
+
+<li>
+<a href="messages.html">
+<i class="fa-solid fa-envelope"></i>
+Messages
+</a>
+</li>
+
+
+<li>
+<a href="notifications.html">
+<i class="fa-solid fa-bell"></i>
+Notifications
+</a>
+</li>
+
+
+<li>
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+</li>
+
+
+</ul>
+
+
+<button id="logoutBtn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+
+</aside>
+
+
+
+
+
+<!-- MAIN -->
+
+
+<main class="main">
+
+
+<!-- MOBILE MENU BUTTON -->
+
+
+
+<header class="topbar">
+<button class="menu-btn" id="menuBtn">
+
+    <i class="fa-solid fa-bars"></i>
+
+</button>
+<h2>
+Manage Routes
+</h2>
+
+
+<div class="admin-profile">
+
+<i class="fa-solid fa-user-circle"></i>
+
+<span>
+Administrator
+</span>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+<!-- CARDS -->
+
+
+<section class="cards">
+
+
+<div class="card">
+
+<h3 id="totalRoutes">
+0
+</h3>
+
+<p>
+Total Routes
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3 id="activeRoutes">
+0
+</h3>
+
+<p>
+Active Routes
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3 id="inactiveRoutes">
+0
+</h3>
+
+<p>
+Inactive Routes
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- TOOLBAR -->
+
+
+<section class="toolbar">
+
+
+<input 
+type="text"
+id="searchRoute"
+placeholder="Search route...">
+
+
+<select id="statusFilter">
+
+<option value="">
+All Status
+</option>
+
+
+<option>
+Active
+</option>
+
+
+<option>
+Inactive
+</option>
+
+
+</select>
+
+
+
+<button id="addRouteBtn">
+
+<i class="fa-solid fa-plus"></i>
+
+Add Route
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- TABLE -->
+
+
+<div class="table-container">
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+<th>Origin</th>
+
+<th>Destination</th>
+
+<th>Distance</th>
+
+<th>Departure</th>
+
+<th>Arrival</th>
+
+<th>Fare</th>
+
+<th>Status</th>
+
+<th>Actions</th>
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="routeTable">
+
+
+<tr>
+
+<td colspan="8">
+
+No routes found.
+
+</td>
+
+</tr>
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+<!-- MODAL -->
+
+
+<div class="modal" id="routeModal">
+
+
+<div class="modal-content">
+
+
+<h2>
+Add Route
+</h2>
+
+
+
+<form id="routeForm">
+
+
+<input type="hidden" id="routeId">
+
+
+
+<label>
+Origin
+</label>
+
+<input id="origin" required>
+
+
+
+<label>
+Destination
+</label>
+
+<input id="destination" required>
+
+
+
+<label>
+Distance
+</label>
+
+<input id="distance" required>
+
+
+
+<label>
+Departure Time
+</label>
+
+<input type="time" id="departure" required>
+
+
+
+<label>
+Arrival Time
+</label>
+
+<input type="time" id="arrival" required>
+
+
+
+<label>
+Fare
+</label>
+
+<input type="number" id="fare" required>
+
+
+
+<label>
+Status
+</label>
+
+
+<select id="status">
+
+
+<option>
+Active
+</option>
+
+
+<option>
+Inactive
+</option>
+
+
+</select>
+
+
+
+<div class="modal-buttons">
+
+
+<button type="submit">
+Save Route
+</button>
+
+
+<button type="button" id="cancelRoute">
+Cancel
+</button>
+
+
+</div>
+
+
+</form>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="sidebar-overlay" id="overlay"></div>
+
+
+
+<script type="module" src="js/routes.js"></script>
+  <script src="js/sidebar.js"></script>
+
+</body>
+
+</html>

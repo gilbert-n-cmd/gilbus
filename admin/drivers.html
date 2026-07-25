@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Manage Drivers | BusGo Admin</title>
+
+<link rel="stylesheet"
+href="css/drivers.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+     SIDEBAR
+========================== -->
+
+<aside class="sidebar">
+
+<div class="sidebar-header">
+
+<div class="logo">
+
+<i class="fa-solid fa-bus"></i>
+
+<h2>BusGo</h2>
+
+</div>
+
+<button id="closeMenu">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="buses.html">
+
+<i class="fa-solid fa-bus"></i>
+
+Manage Buses
+
+</a>
+
+</li>
+
+<li>
+
+<a href="routes.html">
+
+<i class="fa-solid fa-route"></i>
+
+Manage Routes
+
+</a>
+
+</li>
+
+<li>
+
+<a href="companies.html">
+
+<i class="fa-solid fa-building"></i>
+
+Bus Companies
+
+</a>
+
+</li>
+
+<li class="active">
+
+<a href="drivers.html">
+
+<i class="fa-solid fa-user-tie"></i>
+
+Drivers
+
+</a>
+
+</li>
+
+<li>
+
+<a href="customers.html">
+
+<i class="fa-solid fa-users"></i>
+
+Customers
+
+</a>
+
+</li>
+
+<li>
+
+<a href="bookings.html">
+
+<i class="fa-solid fa-ticket"></i>
+
+Bookings
+
+</a>
+
+</li>
+
+<li>
+
+<a href="payments.html">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+Payments
+
+</a>
+
+</li>
+
+<li>
+
+<a href="reports.html">
+
+<i class="fa-solid fa-chart-column"></i>
+
+Reports
+
+</a>
+
+</li>
+
+<li>
+
+<a href="messages.html">
+
+<i class="fa-solid fa-envelope"></i>
+
+Messages
+
+</a>
+
+</li>
+
+<li>
+
+<a href="notifications.html">
+
+<i class="fa-solid fa-bell"></i>
+
+Notifications
+
+</a>
+
+</li>
+
+<li>
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</a>
+
+</li>
+
+</ul>
+
+<button id="logoutBtn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+</aside>
+
+<!-- =========================
+     MAIN CONTENT
+========================== -->
+
+<main class="main">
+
+
+
+<header class="topbar">
+
+  <button class="menu-btn"
+id="menuBtn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+  
+<h2>
+
+Manage Drivers
+
+</h2>
+
+<div class="admin-profile">
+
+<i class="fa-solid fa-user-circle"></i>
+
+<span id="adminName">
+
+Administrator
+
+</span>
+
+</div>
+
+</header>
+
+<!-- =========================
+     DRIVER STATISTICS
+========================== -->
+
+<section class="cards">
+
+<div class="card">
+
+<div class="card-icon blue">
+
+<i class="fa-solid fa-id-card"></i>
+
+</div>
+
+<div>
+
+<h3 id="totalDrivers">
+
+0
+
+</h3>
+
+<p>
+
+Total Drivers
+
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon green">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+<div>
+
+<h3 id="availableDrivers">
+
+0
+
+</h3>
+
+<p>
+
+Available
+
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon orange">
+
+<i class="fa-solid fa-road"></i>
+
+</div>
+
+<div>
+
+<h3 id="tripDrivers">
+
+0
+
+</h3>
+
+<p>
+
+On Trip
+
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon red">
+
+<i class="fa-solid fa-bed"></i>
+
+</div>
+
+<div>
+
+<h3 id="offDutyDrivers">
+
+0
+
+</h3>
+
+<p>
+
+Off Duty
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Continue with Part 2 -->
+  <!-- DRIVER TABLE -->
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Photo</th>
+<th>Driver ID</th>
+<th>Full Name</th>
+<th>Phone</th>
+<th>Email</th>
+<th>Company</th>
+<th>Assigned Bus</th>
+<th>License No.</th>
+<th>Status</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="driverTable">
+
+<tr>
+
+<td colspan="10" style="text-align:center;">
+
+No drivers found.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</main>
+
+
+
+<!-- ADD / EDIT DRIVER MODAL -->
+
+<div class="modal" id="driverModal">
+
+<div class="modal-content">
+
+<h2>Add Driver</h2>
+
+<form id="driverForm">
+
+<input
+type="hidden"
+id="driverId">
+
+
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="driverName"
+required>
+
+
+
+<label>Phone Number</label>
+
+<input
+type="tel"
+id="driverPhone"
+required>
+
+
+
+<label>Email Address</label>
+
+<input
+type="email"
+id="driverEmail"
+required>
+
+
+
+<label>National ID</label>
+
+<input
+type="text"
+id="nationalId"
+required>
+
+
+
+<label>Driving License Number</label>
+
+<input
+type="text"
+id="licenseNumber"
+required>
+
+
+
+<label>Bus Company</label>
+
+<select id="driverCompany">
+
+<option value="">Select Company</option>
+
+</select>
+
+
+
+<label>Assigned Bus</label>
+
+<select id="assignedBus">
+
+<option value="">Select Bus</option>
+
+</select>
+
+
+
+<label>Employment Date</label>
+
+<input
+type="date"
+id="employmentDate">
+
+
+
+<label>Status</label>
+
+<select id="driverStatus">
+
+<option>Available</option>
+
+<option>On Trip</option>
+
+<option>Off Duty</option>
+
+<option>Suspended</option>
+
+</select>
+
+
+
+<label>Driver Photo</label>
+
+<input
+type="file"
+id="driverPhoto"
+accept="image/*">
+
+
+
+<div class="modal-buttons">
+
+<button type="submit">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Driver
+
+</button>
+
+<button
+type="button"
+id="cancelDriver">
+
+<i class="fa-solid fa-xmark"></i>
+
+Cancel
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<script type="module" src="js/drivers.js"></script>
+  <script src="js/sidebar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manage Bus Companies | BusGo Admin</title>
+
+<link rel="stylesheet" href="css/companies.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ==========================
+SIDEBAR
+========================== -->
+
+<aside class="sidebar" id="sidebar">
+
+<div class="sidebar-header">
+
+<div class="logo">
+
+<i class="fa-solid fa-bus"></i>
+
+<h2>BusGo</h2>
+
+</div>
+
+<button id="closeMenu">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<ul>
+
+<li>
+<a href="dashboard.html">
+<i class="fa-solid fa-chart-line"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="buses.html">
+<i class="fa-solid fa-bus"></i>
+Manage Buses
+</a>
+</li>
+
+<li>
+<a href="routes.html">
+<i class="fa-solid fa-route"></i>
+Manage Routes
+</a>
+</li>
+
+<li class="active">
+<a href="companies.html">
+<i class="fa-solid fa-building"></i>
+Bus Companies
+</a>
+</li>
+
+<li>
+<a href="drivers.html">
+<i class="fa-solid fa-user-tie"></i>
+Drivers
+</a>
+</li>
+
+<li>
+<a href="customers.html">
+<i class="fa-solid fa-users"></i>
+Customers
+</a>
+</li>
+
+<li>
+<a href="bookings.html">
+<i class="fa-solid fa-ticket"></i>
+Bookings
+</a>
+</li>
+
+<li>
+<a href="payments.html">
+<i class="fa-solid fa-money-bill-wave"></i>
+Payments
+</a>
+</li>
+
+<li>
+<a href="reports.html">
+<i class="fa-solid fa-chart-column"></i>
+Reports
+</a>
+</li>
+
+<li>
+<a href="messages.html">
+<i class="fa-solid fa-envelope"></i>
+Messages
+</a>
+</li>
+
+<li>
+<a href="notifications.html">
+<i class="fa-solid fa-bell"></i>
+Notifications
+</a>
+</li>
+
+<li>
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+</li>
+
+</ul>
+
+<button id="logoutBtn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</button>
+
+</aside>
+
+<!-- ==========================
+MAIN
+========================== -->
+
+<main class="main">
+
+
+
+<header class="topbar">
+
+  <button class="menu-btn" id="menuBtn">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+  
+  <!---<h2>Manage Bus Companies</h2>--->
+
+<div class="admin-profile">
+
+<i class="fa-solid fa-user-circle"></i>
+
+<span id="adminName">
+
+Administrator
+
+</span>
+
+</div>
+
+</header>
+
+<!-- Statistics -->
+
+<section class="cards">
+
+<div class="card">
+
+<h3 id="totalCompanies">0</h3>
+
+<p>Total Companies</p>
+
+</div>
+
+<div class="card">
+
+<h3 id="activeCompanies">0</h3>
+
+<p>Active Companies</p>
+
+</div>
+
+<div class="card">
+
+<h3 id="inactiveCompanies">0</h3>
+
+<p>Inactive Companies</p>
+
+</div>
+
+<div class="card">
+
+<h3 id="totalRoutes">0</h3>
+
+<p>Total Routes</p>
+
+</div>
+
+</section>
+
+<!-- Toolbar -->
+
+<section class="toolbar">
+
+<input
+type="text"
+id="searchCompany"
+placeholder="Search company...">
+
+<select id="filterStatus">
+
+<option value="">All Status</option>
+
+<option value="Active">Active</option>
+
+<option value="Inactive">Inactive</option>
+
+</select>
+
+<button id="addCompanyBtn">
+
+<i class="fa-solid fa-plus"></i>
+
+Add Company
+
+</button>
+
+</section>
+
+<!-- Table -->
+
+<div class="table-container">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Logo</th>
+
+<th>Company</th>
+
+<th>Phone</th>
+
+<th>Email</th>
+
+<th>Address</th>
+
+<th>Status</th>
+
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody id="companyTable">
+
+<tr>
+
+<td colspan="7" style="text-align:center">
+
+No companies available.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</main>
+
+<!-- ==========================
+ADD / EDIT MODAL
+========================== -->
+
+<div class="modal" id="companyModal">
+
+<div class="modal-content">
+
+<h2 id="modalTitle">
+
+Add Bus Company
+
+</h2>
+
+<form id="companyForm">
+
+<input
+type="hidden"
+id="companyId">
+
+<label>Company Name</label>
+
+<input
+type="text"
+id="companyName"
+required>
+
+<label>Phone</label>
+
+<input
+type="text"
+id="phone"
+required>
+
+<label>Email</label>
+
+<input
+type="email"
+id="email"
+required>
+
+<label>Address</label>
+
+<input
+type="text"
+id="address"
+required>
+
+<label>Status</label>
+
+<select id="status">
+
+<option value="Active">Active</option>
+
+<option value="Inactive">Inactive</option>
+
+</select>
+
+<label>Company Logo</label>
+
+<input
+type="file"
+id="companyLogo"
+accept="image/*">
+
+<div class="modal-buttons">
+
+<button type="submit">
+
+Save Company
+
+</button>
+
+<button
+type="button"
+id="cancelCompany">
+
+Cancel
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+<script type="module" src="js/companies.js"></script>
+<script src="js/sidebar.js"></script>
+
+</body>
+
+</html>
